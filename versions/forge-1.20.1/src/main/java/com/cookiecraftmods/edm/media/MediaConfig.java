@@ -18,6 +18,7 @@ public final class MediaConfig {
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 	private static MediaConfig instance;
 
+	public MediaSourcePolicy mediaSources = new MediaSourcePolicy();
 	public int maxMediaUrlLength = 2048;
 	public int maxSavedVideosPerTv = 128;
 	public int remoteRange = -1;
@@ -58,6 +59,8 @@ public final class MediaConfig {
 	}
 
 	private void sanitize() {
+		if (mediaSources == null) mediaSources = new MediaSourcePolicy();
+		mediaSources.sanitize();
 		maxMediaUrlLength = Math.max(256, Math.min(maxMediaUrlLength, 8192));
 		maxSavedVideosPerTv = Math.max(1, Math.min(maxSavedVideosPerTv, 128));
 		remoteRange = Math.max(-1, remoteRange);

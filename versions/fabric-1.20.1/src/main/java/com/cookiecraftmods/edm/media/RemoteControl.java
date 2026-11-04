@@ -19,15 +19,16 @@ public final class RemoteControl {
 		ResolvedTv target = resolve(player, binding);
 		if (target == null) return false;
 
-		TvDevice.AdvanceResult result = TvDevice.advance(target.world(), target.pos(), target.state());
+		TvDevice.AdvanceResult result = TvDevice.advance(target.world(), target.pos(), target.state(), (ServerPlayerEntity) player);
 		Text message = switch (result) {
 			case ADVANCED -> Text.translatable("message.electronic_device_mod.remote_next_video");
 			case POWERED_ON -> Text.translatable("message.electronic_device_mod.tv_powered_on");
 			case ONLY_VIDEO -> Text.translatable("message.electronic_device_mod.tv_only_video");
 			case NO_MEDIA -> Text.translatable("message.electronic_device_mod.tv_no_videos");
+			case SOURCE_DENIED -> null;
 			case TV_MISSING -> Text.translatable("message.electronic_device_mod.remote_tv_missing");
 		};
-		player.sendMessage(message, true);
+		if (message != null) player.sendMessage(message, true);
 		return result != TvDevice.AdvanceResult.TV_MISSING;
 	}
 

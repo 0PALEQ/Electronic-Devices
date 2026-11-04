@@ -1,6 +1,7 @@
 package com.cookiecraftmods.edm.block.entity;
 
 import com.cookiecraftmods.edm.block.TvDevice;
+import com.cookiecraftmods.edm.media.MediaConfig;
 import com.cookiecraftmods.edm.init.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -21,6 +22,7 @@ public class TvBlockEntity extends BlockEntity {
 	public static final int DEFAULT_VOLUME = 100;
 
 	private UUID owner;
+	private boolean serverMediaBlocked;
 	private final List<String> mediaUrls = new ArrayList<>();
 	private int selectedMediaIndex = -1;
 	private int volume = DEFAULT_VOLUME;
@@ -47,9 +49,23 @@ public class TvBlockEntity extends BlockEntity {
 	}
 
 	public String getMediaUrl() {
+		if (isSourceDisabled()) return "";
 		return selectedMediaIndex >= 0 && selectedMediaIndex < mediaUrls.size()
 			? mediaUrls.get(selectedMediaIndex)
 			: "";
+	}
+
+	private boolean isSourceDisabled() {
+		if (!(world instanceof net.minecraft.server.world.ServerWorld)) return serverMediaBlocked;
+		if (selectedMediaIndex < 0 || selectedMediaIndex >= mediaUrls.size()) return false;
+		MediaConfig config = MediaConfig.get();
+		try {
+			// Administrator-only media remains visible after an administrator starts it.
+			config.mediaSources.check(mediaUrls.get(selectedMediaIndex), config.maxMediaUrlLength, true);
+			return false;
+		} catch (IllegalArgumentException exception) {
+			return true;
+		}
 	}
 
 	public List<String> getMediaUrls() {
@@ -174,6 +190,7 @@ public class TvBlockEntity extends BlockEntity {
 	@Override
 	public void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
 		super.readNbt(nbt, registryLookup);
+		serverMediaBlocked = nbt.getBoolean("ServerMediaBlocked");
 		owner = nbt.containsUuid("Owner") ? nbt.getUuid("Owner") : null;
 		mediaUrls.clear();
 		NbtList savedUrls = nbt.getList("MediaUrls", NbtElement.STRING_TYPE);
@@ -208,6 +225,7 @@ public class TvBlockEntity extends BlockEntity {
 		NbtList savedUrls = new NbtList();
 		for (String url : mediaUrls) savedUrls.add(NbtString.of(url));
 		nbt.put("MediaUrls", savedUrls);
+		nbt.putBoolean("ServerMediaBlocked", isSourceDisabled());
 		nbt.putInt("SelectedMediaIndex", selectedMediaIndex);
 		nbt.putInt("Volume", volume);
 		// Retain the active URL for downgrade compatibility with the previous single-video format.

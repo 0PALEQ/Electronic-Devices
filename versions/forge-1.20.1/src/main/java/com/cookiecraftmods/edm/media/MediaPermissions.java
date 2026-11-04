@@ -33,4 +33,9 @@ public final class MediaPermissions {
 	public static void registerNodes(PermissionGatherEvent.Nodes event) {
 		event.addNodes(MANAGE_OTHERS_NODE, ASSIGN_URL_NODE);
 	}
+
+	public static void checkSource(ServerPlayerEntity player, String url) {
+		MediaConfig config = MediaConfig.get();
+		config.mediaSources.check(url, config.maxMediaUrlLength, player.hasPermissionLevel(2));
+	}
 }

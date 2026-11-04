@@ -118,6 +118,7 @@ public final class ModNetworking {
 		final String url;
 		try {
 			url = MediaUrl.validate(rawUrl, MediaConfig.get().maxMediaUrlLength);
+			MediaPermissions.checkSource(player, url);
 		} catch (IllegalArgumentException exception) {
 			sendActionResult(player, token, false, exception.getMessage());
 			return;
@@ -138,12 +139,27 @@ public final class ModNetworking {
 		refreshAndResult(player, target, added ? "Media item saved and selected." : "Saved media item selected.");
 	}
 
+	private static boolean checkSource(ServerPlayerEntity player, long token, String url) {
+		try {
+			MediaPermissions.checkSource(player, url);
+			return true;
+		} catch (IllegalArgumentException exception) {
+			sendActionResult(player, token, false, exception.getMessage());
+			return false;
+		}
+	}
+
 	private static void selectMedia(ServerPlayerEntity player, long token, int index) {
 		MenuTarget target = getMenuTarget(player, token);
 		if (target == null) {
 			sendActionResult(player, token, false, "The TV menu expired or the target TV is unavailable.");
 			return;
 		}
+		if (index < 0 || index >= target.tv().getSavedVideoCount()) {
+			sendActionResult(player, token, false, "That saved video no longer exists.");
+			return;
+		}
+		if (!checkSource(player, token, target.tv().getMediaUrls().get(index))) return;
 		if (!target.tv().selectMedia(index)) {
 			sendActionResult(player, token, false, "That saved video no longer exists.");
 			return;
@@ -167,7 +183,7 @@ public final class ModNetworking {
 			sendActionResult(player, token, false, "That saved video no longer exists.");
 			return;
 		}
-		if (tv.getSavedVideoCount() == 1) {
+		if (tv.getSavedVideoCount() == 1 || index == tv.getSelectedMediaIndex()) {
 			TvDevice.setPowered(target.world(), target.pos(), target.world().getBlockState(target.pos()), false);
 		}
 		tv.removeMedia(index);
@@ -188,6 +204,7 @@ public final class ModNetworking {
 			sendActionResult(player, token, false, "Save a media item before turning the TV on.");
 			return;
 		}
+		if (!powered && !checkSource(player, token, target.tv().getMediaUrl())) return;
 		TvDevice.toggle(target.world(), target.pos(), state);
 		refreshAndResult(player, target, powered ? "TV turned off." : "TV turned on.");
 	}

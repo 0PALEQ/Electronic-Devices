@@ -17,4 +17,9 @@ public final class MediaPermissions {
 	public static boolean canAssignUrl(ServerPlayerEntity player) {
 		return Permissions.check(player, ASSIGN_URL, 0);
 	}
+
+	public static void checkSource(ServerPlayerEntity player, String url) {
+		MediaConfig config = MediaConfig.get();
+		config.mediaSources.check(url, config.maxMediaUrlLength, Permissions.check(player, "electronic_device_mod.media.admin", 2));
+	}
 }

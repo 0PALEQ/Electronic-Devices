@@ -61,5 +61,74 @@ Verify the reflective API against a downloaded stable WaterMedia jar with:
 This checks binary signatures for all adapters without initializing native codecs.
 
 TV playback also accepts all WaterMedia platform hosts and direct media URLs,
-including HTTP(S), `file://` and `water://` resources. See [shared/README.md](shared/README.md)
-for examples, client-local file behavior and remote playlist limitations.
+including HTTP(S), `file://` and `water://` resources.
+## Server media source permissions
+
+On the server, edit `config/electronic_device_mod-media.json` after its first
+startup, then restart the server. Existing configs automatically receive the new
+`mediaSources` section. Client settings cannot override the server's rules.
+The same settings apply to the integrated server in singleplayer.
+
+Each entry under `mediaSources.sources` has two settings:
+
+- `enabled`: allow this source (default `true`). Setting it to `false` blocks
+  everyone, including administrators.
+- `requireAdmin`: require server operator level 2 or higher (default `false`).
+  On Fabric, the permission `electronic_device_mod.media.admin` can also be
+  assigned through a permissions provider.
+
+Example section inside the existing config (keep the other generated entries):
+
+```json
+"mediaSources": {
+  "sources": {
+    "youtube": { "enabled": true, "requireAdmin": false },
+    "twitch": { "enabled": true, "requireAdmin": true },
+    "adult_content": { "enabled": false, "requireAdmin": false },
+    "direct": { "enabled": true, "requireAdmin": true },
+    "file": { "enabled": false, "requireAdmin": false },
+    "water": { "enabled": false, "requireAdmin": false }
+  }
+}
+```
+
+Available source keys: `youtube`, `twitch`, `kick`, `bilibili`, `odysee`,
+`dtube`, `vidlii`, `twitter` (also X), `bluesky`, `tiktok`, `facebook`,
+`instagram`, `soundcloud`, `newgrounds`, `imgur`, `lightshot`, `medal`,
+`streamable`, `sendvid`, `googleDrive`, `dropbox`, `mediafire`, `adult_content`,
+`direct`, `file`, and `water`.
+
+`direct` covers all HTTP(S) hosts not recognized as one of the named sources,
+including custom streams and future platforms. Platform matching includes
+subdomains and common short-link aliases. It classifies the submitted URL;
+it does not inspect redirects, remote playlists, or the eventual content of
+third-party URLs. To restrict arbitrary external links, restrict `direct` too.
+`file` and `water` are separate because they refer to resources on each client.
+
+Rules are checked on the server when adding URLs, selecting saved entries,
+turning a TV on, and cycling media through the TV or remote control. Removing
+the selected entry turns the TV off so removal cannot start a restricted entry.
+Administrator restrictions control who can start media; other nearby players
+can still watch playback started by an administrator. Existing ownership and
+URL assignment permissions continue to apply.
+
+Disabled sources are also suppressed in TV state sent by the server, including
+TVs that were already playing when the world was saved. Their playlist entries
+remain available if the source is enabled again later.
+
+### Adult content category
+
+`adult_content` applies one rule to the built-in adult-site domain list and all
+its subdomains. To include additional sites, add bare domains under
+`mediaSources.additionalAdultDomains`, alongside `sources`, for example:
+
+```json
+"additionalAdultDomains": ["adult-site.example", "another-adult-site.example"]
+```
+
+This category matches domains, not the content of individual videos. No domain
+list can identify every adult site or adult content on general-purpose platforms.
+Unknown hosts use `direct` unless added to `additionalAdultDomains`. Redirects
+and remote playlist contents are not inspected. Restrict `direct` as well if
+unknown hosts must not be available. Previous platform-specific settings migrate
+automatically to `adult_content`, preserving the more restrictive options.

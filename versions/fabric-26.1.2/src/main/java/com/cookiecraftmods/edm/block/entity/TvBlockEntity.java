@@ -1,6 +1,7 @@
 package com.cookiecraftmods.edm.block.entity;
 
 import com.cookiecraftmods.edm.block.TvDevice;
+import com.cookiecraftmods.edm.media.MediaConfig;
 import com.cookiecraftmods.edm.init.ModBlockEntities;
 import com.mojang.serialization.Codec;
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class TvBlockEntity extends BlockEntity {
 	public static final int DEFAULT_VOLUME = 100;
 
 	private UUID owner;
+	private boolean serverMediaBlocked;
 	private final List<String> mediaUrls = new ArrayList<>();
 	private int selectedMediaIndex = -1;
 	private int volume = DEFAULT_VOLUME;
@@ -47,9 +49,23 @@ public class TvBlockEntity extends BlockEntity {
 	}
 
 	public String getMediaUrl() {
+		if (isSourceDisabled()) return "";
 		return selectedMediaIndex >= 0 && selectedMediaIndex < mediaUrls.size()
 			? mediaUrls.get(selectedMediaIndex)
 			: "";
+	}
+
+	private boolean isSourceDisabled() {
+		if (!(level instanceof net.minecraft.server.level.ServerLevel)) return serverMediaBlocked;
+		if (selectedMediaIndex < 0 || selectedMediaIndex >= mediaUrls.size()) return false;
+		MediaConfig config = MediaConfig.get();
+		try {
+			// Administrator-only media remains visible after an administrator starts it.
+			config.mediaSources.check(mediaUrls.get(selectedMediaIndex), config.maxMediaUrlLength, true);
+			return false;
+		} catch (IllegalArgumentException exception) {
+			return true;
+		}
 	}
 
 	public List<String> getMediaUrls() {
@@ -174,6 +190,7 @@ public class TvBlockEntity extends BlockEntity {
 	@Override
 	protected void loadAdditional(ValueInput view) {
 		super.loadAdditional(view);
+		serverMediaBlocked = view.getBooleanOr("ServerMediaBlocked", false);
 		owner = view.read("Owner", UUIDUtil.AUTHLIB_CODEC).orElse(null);
 		mediaUrls.clear();
 		view.list("MediaUrls", Codec.STRING).ifPresent(savedUrls -> {
@@ -205,6 +222,7 @@ public class TvBlockEntity extends BlockEntity {
 		view.storeNullable("Owner", UUIDUtil.AUTHLIB_CODEC, owner);
 		ValueOutput.TypedOutputList<String> savedUrls = view.list("MediaUrls", Codec.STRING);
 		for (String url : mediaUrls) savedUrls.add(url);
+		view.putBoolean("ServerMediaBlocked", isSourceDisabled());
 		view.putInt("SelectedMediaIndex", selectedMediaIndex);
 		view.putInt("Volume", volume);
 		// Retain the active URL for downgrade compatibility with the previous single-video format.

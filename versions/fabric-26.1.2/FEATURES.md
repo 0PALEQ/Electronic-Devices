@@ -26,7 +26,7 @@ all old four-component prerelease numbers; use the exact stable files above.
 
 # Electronic Device Mod — Feature Reference
 
-This document describes the features implemented in the source tree for Electronic Device Mod `26.8` on Fabric for Minecraft `26.1.2`.
+This document describes the features implemented in the source tree for Electronic Device Mod `2.1.0` on Fabric for Minecraft `26.1.2`.
 
 ## At a glance
 

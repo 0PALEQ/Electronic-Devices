@@ -2,6 +2,7 @@ package com.cookiecraftmods.edm.block;
 
 import com.cookiecraftmods.edm.block.entity.TvBlockEntity;
 import com.cookiecraftmods.edm.network.ModNetworking;
+import com.cookiecraftmods.edm.media.MediaPermissions;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
@@ -25,7 +26,8 @@ public interface TvDevice {
 		POWERED_ON,
 		ONLY_VIDEO,
 		NO_MEDIA,
-		TV_MISSING
+		TV_MISSING,
+		SOURCE_DENIED
 	}
 
 	static ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -36,13 +38,13 @@ public interface TvDevice {
 			return ActionResult.success(world.isClient);
 		}
 		if (!world.isClient && player instanceof ServerPlayerEntity serverPlayer) {
-			AdvanceResult result = advance(world, pos, state);
+			AdvanceResult result = advance(world, pos, state, serverPlayer);
 			Text message = switch (result) {
 				case ADVANCED -> Text.translatable("message.electronic_device_mod.tv_next_video");
 				case POWERED_ON -> Text.translatable("message.electronic_device_mod.tv_powered_on");
 				case ONLY_VIDEO -> Text.translatable("message.electronic_device_mod.tv_only_video");
 				case NO_MEDIA -> Text.translatable("message.electronic_device_mod.tv_no_videos");
-				case TV_MISSING -> null;
+				case TV_MISSING, SOURCE_DENIED -> null;
 			};
 			if (message != null) serverPlayer.sendMessage(message, true);
 		}
@@ -65,12 +67,21 @@ public interface TvDevice {
 		return true;
 	}
 
-	static AdvanceResult advance(World world, BlockPos pos, BlockState state) {
+	static AdvanceResult advance(World world, BlockPos pos, BlockState state, ServerPlayerEntity player) {
 		if (!(state.getBlock() instanceof TvDevice) || !state.contains(DISPLAY_STATE)
 			|| !(world.getBlockEntity(pos) instanceof TvBlockEntity tv)) {
 			return AdvanceResult.TV_MISSING;
 		}
 		if (!tv.hasMedia()) return AdvanceResult.NO_MEDIA;
+		int nextIndex = state.get(DISPLAY_STATE) == 0 ? tv.getSelectedMediaIndex()
+			: (tv.getSelectedMediaIndex() + 1) % tv.getSavedVideoCount();
+		try {
+			MediaPermissions.checkSource(player, tv.getMediaUrls().get(nextIndex));
+		} catch (IllegalArgumentException exception) {
+			player.sendMessage(Text.literal(exception.getMessage()), true);
+			return AdvanceResult.SOURCE_DENIED;
+		}
+
 		if (state.get(DISPLAY_STATE) == 0) {
 			setPowered(world, pos, state, true);
 			return AdvanceResult.POWERED_ON;

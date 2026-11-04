@@ -4,6 +4,7 @@
 **/.idea/
 **/out/
 .dedup-staging/
+/build-all.bat
 
 # Local Java installations
 **/.jdk*/

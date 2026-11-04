@@ -26,7 +26,7 @@ all old four-component prerelease numbers; use the exact stable files above.
 
 # Electronic Device Mod — Feature Reference
 
-This document describes the features implemented in the source tree for Electronic Device Mod `26.8.5` on Forge for Minecraft `1.20.1`.
+This document describes the features implemented in the source tree for Electronic Device Mod `2.1.0` on Forge for Minecraft `1.20.1`.
 
 ## At a glance
 

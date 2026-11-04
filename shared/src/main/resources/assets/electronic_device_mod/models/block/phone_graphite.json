@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/graphite_phone",
+  "textures": {
+    "all": "electronic_device_mod:block/phonebody_graphite",
+    "particle": "electronic_device_mod:block/phonebody_graphite",
+    "0": "electronic_device_mod:block/cameras",
+    "1": "electronic_device_mod:block/phonebody_graphite"
+  },
+  "render_type": "solid"
+}

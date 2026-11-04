@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bca",
+    "aaa"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "electronic_device_mod:electronic_parts",
+    "c": "minecraft:water_bucket"
+  },
+  "result": {
+    "id": "electronic_device_mod:coffee_machine",
+    "count": 1
+  }
+}

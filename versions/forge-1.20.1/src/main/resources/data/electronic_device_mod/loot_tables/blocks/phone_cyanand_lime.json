@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "electronic_device_mod:blocks/phone_cyanand_lime",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "electronic_device_mod:phone_cyanand_lime"
+        }
+      ]
+    }
+  ]
+}

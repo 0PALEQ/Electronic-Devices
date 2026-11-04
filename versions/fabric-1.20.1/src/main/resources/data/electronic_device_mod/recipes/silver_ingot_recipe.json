@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:silver_nugget"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:silver_ingot",
+    "count": 1
+  }
+}

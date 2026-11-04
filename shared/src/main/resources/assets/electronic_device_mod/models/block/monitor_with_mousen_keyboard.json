@@ -1,0 +1,12 @@
+{
+  "parent": "electronic_device_mod:custom/monitor_with_mouse_n_keyboard",
+  "textures": {
+    "all": "electronic_device_mod:block/mousenkeyboard",
+    "particle": "electronic_device_mod:block/mousenkeyboard",
+    "0": "electronic_device_mod:block/mousenkeyboard",
+    "4": "electronic_device_mod:block/1monitor1",
+    "5": "electronic_device_mod:block/1monitor2",
+    "6": "electronic_device_mod:block/1monitor3"
+  },
+  "render_type": "solid"
+}

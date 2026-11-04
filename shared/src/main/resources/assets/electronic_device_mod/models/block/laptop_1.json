@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/laptop1",
+  "textures": {
+    "all": "electronic_device_mod:block/laptop1",
+    "particle": "electronic_device_mod:block/laptop1",
+    "1": "electronic_device_mod:block/laptop1"
+  },
+  "render_type": "solid"
+}

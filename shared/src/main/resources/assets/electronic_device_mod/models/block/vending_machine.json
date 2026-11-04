@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/vending_machine",
+  "textures": {
+    "all": "electronic_device_mod:block/vending_machine",
+    "particle": "electronic_device_mod:block/vending_machine",
+    "0": "electronic_device_mod:block/glass_gray",
+    "1": "electronic_device_mod:block/vending_machine"
+  },
+  "render_type": "translucent"
+}

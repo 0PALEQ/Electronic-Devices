@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "electronic_device_mod:monitor_2_black"
+    },
+    {
+      "item": "electronic_device_mod:screen"
+    },
+    {
+      "item": "electronic_device_mod:black_plastick"
+    }
+  ],
+  "result": {
+    "id": "electronic_device_mod:double_monitor_2_black",
+    "count": 1
+  }
+}

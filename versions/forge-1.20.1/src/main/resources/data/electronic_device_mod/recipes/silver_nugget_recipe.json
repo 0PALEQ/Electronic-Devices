@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "electronic_device_mod:silver_ingot"
+    }
+  ],
+  "result": {
+    "item": "electronic_device_mod:silver_nugget",
+    "count": 9
+  }
+}

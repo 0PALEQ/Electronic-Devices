@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/vacuumrobot",
+  "textures": {
+    "all": "electronic_device_mod:block/vacuumrobot",
+    "particle": "electronic_device_mod:block/vacuumrobot",
+    "0": "electronic_device_mod:block/vacuumrobot"
+  },
+  "render_type": "solid"
+}

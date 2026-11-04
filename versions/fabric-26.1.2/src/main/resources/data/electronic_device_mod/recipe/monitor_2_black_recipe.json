@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "electronic_device_mod:monitor_with_mousen_keyboard",
+    "electronic_device_mod:black_plastick"
+  ],
+  "result": {
+    "id": "electronic_device_mod:monitor_2_black",
+    "count": 1
+  }
+}

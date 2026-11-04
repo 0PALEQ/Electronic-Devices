@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/toaster",
+  "textures": {
+    "all": "electronic_device_mod:block/toaster",
+    "particle": "electronic_device_mod:block/toaster",
+    "0": "electronic_device_mod:block/toaster"
+  },
+  "render_type": "solid"
+}

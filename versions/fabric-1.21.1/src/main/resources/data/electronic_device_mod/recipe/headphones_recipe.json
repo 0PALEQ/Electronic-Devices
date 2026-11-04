@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "b b",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "b": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:headphones",
+    "count": 1
+  }
+}

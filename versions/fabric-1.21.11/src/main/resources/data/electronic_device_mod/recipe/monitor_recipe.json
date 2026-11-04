@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    " c "
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "electronic_device_mod:screen",
+    "c": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "electronic_device_mod:monitor",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bcb",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "d": {
+      "item": "electronic_device_mod:battery"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:drone",
+    "count": 1
+  }
+}

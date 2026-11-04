@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aab",
+    "cdb",
+    "ebb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "c": {
+      "tag": "forge:stained_glass_panes"
+    },
+    "d": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "e": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:pc",
+    "count": 1
+  }
+}

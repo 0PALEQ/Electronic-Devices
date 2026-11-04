@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "b": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "c": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:console",
+    "count": 1
+  }
+}

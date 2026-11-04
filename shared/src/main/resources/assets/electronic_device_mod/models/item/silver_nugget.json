@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "electronic_device_mod:item/silver_nugget"
+  }
+}

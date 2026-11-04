@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/pdesert",
+  "textures": {
+    "all": "electronic_device_mod:block/phonebody_desert",
+    "particle": "electronic_device_mod:block/phonebody_desert",
+    "0": "electronic_device_mod:block/camerasyellow",
+    "1": "electronic_device_mod:block/phonebody_desert"
+  },
+  "render_type": "solid"
+}

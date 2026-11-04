@@ -1,0 +1,43 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="electronic_device_mod"
+version="${version}"
+displayName="Electronic Device Mod"
+displayURL="https://cookiecraftmods.com"
+logoFile="logo.png"
+authors="opaleq, cookiecraftmods"
+displayTest="MATCH_VERSION"
+description='''
+Adds decorative and interactive electronic devices, including server-synced YouTube TV playlists.
+'''
+
+[[dependencies.electronic_device_mod]]
+modId="forge"
+mandatory=true
+versionRange="[${forge_version},)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.electronic_device_mod]]
+modId="minecraft"
+mandatory=true
+versionRange="[${minecraft_version}]"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.electronic_device_mod]]
+modId="watermedia"
+mandatory=false
+versionRange="[3.0.0,)"
+ordering="AFTER"
+side="CLIENT"
+
+[[dependencies.electronic_device_mod]]
+modId="watermedia_binaries"
+mandatory=false
+versionRange="[3.0.0,)"
+ordering="AFTER"
+side="CLIENT"

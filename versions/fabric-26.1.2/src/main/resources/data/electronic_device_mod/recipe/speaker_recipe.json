@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "minecraft:copper_ingot",
+    "b": "electronic_device_mod:electronic_parts"
+  },
+  "result": {
+    "id": "electronic_device_mod:speaker",
+    "count": 1
+  }
+}

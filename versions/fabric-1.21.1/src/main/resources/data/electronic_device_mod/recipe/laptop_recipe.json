@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:redstone"
+    },
+    "b": {
+      "item": "electronic_device_mod:screen"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "d": {
+      "item": "electronic_device_mod:keyboard"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:laptop_1",
+    "count": 1
+  }
+}

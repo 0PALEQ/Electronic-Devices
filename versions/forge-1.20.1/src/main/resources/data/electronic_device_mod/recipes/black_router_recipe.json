@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "bcb",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:copper_ingot"
+    },
+    "b": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:black_router",
+    "count": 1
+  }
+}

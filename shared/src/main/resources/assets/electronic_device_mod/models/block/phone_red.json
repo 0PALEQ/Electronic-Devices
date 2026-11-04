@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/pred",
+  "textures": {
+    "all": "electronic_device_mod:block/phonebody_red",
+    "particle": "electronic_device_mod:block/phonebody_red",
+    "0": "electronic_device_mod:block/camerasred",
+    "1": "electronic_device_mod:block/phonebody_red"
+  },
+  "render_type": "solid"
+}

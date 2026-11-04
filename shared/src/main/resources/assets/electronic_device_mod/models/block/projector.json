@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/projector",
+  "textures": {
+    "all": "electronic_device_mod:block/projector",
+    "particle": "electronic_device_mod:block/projector",
+    "0": "electronic_device_mod:block/projector"
+  },
+  "render_type": "solid"
+}

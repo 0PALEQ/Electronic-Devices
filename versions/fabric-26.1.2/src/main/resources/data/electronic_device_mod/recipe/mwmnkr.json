@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "electronic_device_mod:monitor",
+    "electronic_device_mod:mousen_keyboard"
+  ],
+  "result": {
+    "id": "electronic_device_mod:monitor_with_mousen_keyboard",
+    "count": 1
+  }
+}

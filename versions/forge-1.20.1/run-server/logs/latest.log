@@ -1,0 +1,60 @@
+[13:30:45] [main/INFO] (Launcher) ModLauncher running: args [--launchTarget, forgeserveruserdev, --gameDir, ., --fml.forgeVersion, 47.4.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui, nogui, --nogui]
+[13:30:45] [main/INFO] (Launcher) ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 21.0.8 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[13:30:45] [main/INFO] (unprotect) Initializing Unprotect using ModLauncher backend, target: Minecraft and loader classes (minecraft+forge)
+[13:30:45] [main/INFO] (ImmediateWindowHandler) ImmediateWindowProvider not loading because launch target is forgeserveruserdev
+[13:30:46] [main/INFO] (mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/opale/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.12/cf1f787f58d3b08b0cb53ecbba7928c09a1893c8/mixin-patched-0.8.5.12.jar%23130!/ Service=ModLauncher Env=SERVER
+[13:30:46] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.1\97b774cead20444ed9d0c2de762881a15d872397\javafmllanguage-1.20.1-47.4.1.jar is missing mods.toml file
+[13:30:46] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.1\da4a2af4a4ebbbb33e35b292a16fe3f7122b236\lowcodelanguage-1.20.1-47.4.1.jar is missing mods.toml file
+[13:30:46] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.1\75a8f0757adad78cbd8108dff9e0d39cbdb3d787\mclanguage-1.20.1-47.4.1.jar is missing mods.toml file
+[13:30:46] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.1\3061e70b85c05f936d9fa24477be4d4205d8f6b8\fmlcore-1.20.1-47.4.1.jar is missing mods.toml file
+[13:30:46] [main/INFO] (ModDiscoverer) Found mod file javafmllanguage-1.20.1-47.4.1.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@b93aad
+[13:30:46] [main/INFO] (ModDiscoverer) Found mod file lowcodelanguage-1.20.1-47.4.1.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@b93aad
+[13:30:46] [main/INFO] (ModDiscoverer) Found mod file mclanguage-1.20.1-47.4.1.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@b93aad
+[13:30:46] [main/INFO] (ModDiscoverer) Found mod file fmlcore-1.20.1-47.4.1.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@b93aad
+[13:30:46] [main/INFO] (ModDiscoverer) Found mod file forge-1.20.1-47.4.1-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@b93aad
+[13:30:46] [main/INFO] (ModDiscoverer) Found mod file main of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@b93aad
+[13:30:46] [main/INFO] (ModDiscoverer) Found mod file  of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@b93aad
+[13:30:46] [main/INFO] (JarInJarDependencyLocator) No dependencies to load found. Skipping!
+[13:30:48] [main/INFO] (LaunchServiceHandler) Launching target 'forgeserveruserdev' with arguments [--gameDir, ., nogui, nogui, --nogui]
+[04sie2026 13:30:48.894] [main/INFO] [unprotect/]: Found 7431 Minecraft classes
+[04sie2026 13:30:54.602] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.1, for MC 1.20.1 with MCP 20230612.114412
+[04sie2026 13:30:54.605] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.1 Initialized
+[04sie2026 13:30:55.503] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[04sie2026 13:30:56.050] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.1 Target: 47.4.10
+[04sie2026 13:30:56.630] [main/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[04sie2026 13:30:56.705] [main/WARN] [net.minecraftforge.common.ForgeHooks/WP]: The following mods have version differences that were not resolved:
+electronic_device_mod (version 26.8.5 -> 26.8)
+forge (version 47.4.22 -> 47.4.1)
+Things may not work well.
+[04sie2026 13:30:57.286] [main/WARN] [net.minecraft.resource.DefaultResourcePackBuilder/]: Assets URL 'union:/C:/Users/opale/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.4.1-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1/forge-1.20.1-47.4.1-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1.jar%23201!/assets/.mcassetsroot' uses unexpected schema
+[04sie2026 13:30:57.286] [main/WARN] [net.minecraft.resource.DefaultResourcePackBuilder/]: Assets URL 'union:/C:/Users/opale/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.4.1-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1/forge-1.20.1-47.4.1-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1.jar%23201!/data/.mcassetsroot' uses unexpected schema
+[04sie2026 13:30:59.113] [main/INFO] [net.minecraft.recipe.RecipeManager/]: Loaded 7 recipes
+[04sie2026 13:30:59.213] [main/INFO] [net.minecraft.advancement.AdvancementManager/]: Loaded 1271 advancements
+[04sie2026 13:30:59.652] [Server thread/INFO] [net.minecraft.server.dedicated.MinecraftDedicatedServer/]: Starting minecraft server version 1.20.1
+[04sie2026 13:30:59.652] [Server thread/INFO] [net.minecraft.server.dedicated.MinecraftDedicatedServer/]: Loading properties
+[04sie2026 13:30:59.652] [Server thread/INFO] [net.minecraft.server.dedicated.MinecraftDedicatedServer/]: Default game type: SURVIVAL
+[04sie2026 13:30:59.652] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[04sie2026 13:30:59.723] [Server thread/INFO] [net.minecraft.server.dedicated.MinecraftDedicatedServer/]: Starting Minecraft server on *:25565
+[04sie2026 13:30:59.735] [Server thread/INFO] [net.minecraft.server.ServerNetworkIo/]: Using default channel type
+[04sie2026 13:30:59.889] [Server thread/INFO] [net.minecraft.server.dedicated.MinecraftDedicatedServer/]: Preparing level "world"
+[04sie2026 13:31:00.560] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[04sie2026 13:31:02.202] [Worker-Main-10/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[04sie2026 13:31:02.203] [Worker-Main-10/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[04sie2026 13:31:02.204] [Worker-Main-10/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[04sie2026 13:31:02.204] [Worker-Main-10/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[04sie2026 13:31:02.561] [Worker-Main-6/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 31%
+[04sie2026 13:31:02.847] [Server thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Time elapsed: 2285 ms
+[04sie2026 13:31:02.847] [Server thread/INFO] [net.minecraft.server.dedicated.MinecraftDedicatedServer/]: Done (2.992s)! For help, type "help"
+[04sie2026 13:31:02.860] [Server thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[04sie2026 13:31:02.865] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[04sie2026 13:31:02.912] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping the server
+[04sie2026 13:31:02.916] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[04sie2026 13:31:02.917] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[04sie2026 13:31:02.917] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[04sie2026 13:31:03.960] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[04sie2026 13:31:04.452] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_nether
+[04sie2026 13:31:04.453] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[world]'/minecraft:the_end
+[04sie2026 13:31:04.480] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[04sie2026 13:31:04.480] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[04sie2026 13:31:04.480] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[04sie2026 13:31:04.480] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

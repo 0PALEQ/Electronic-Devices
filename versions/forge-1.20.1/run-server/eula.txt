@@ -1,0 +1,2 @@
+# Accepted for the automated local Forge dedicated-server regression run.
+eula=true

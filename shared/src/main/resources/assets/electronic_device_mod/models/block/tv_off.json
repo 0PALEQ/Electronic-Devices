@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/tv_16-9",
+  "textures": {
+    "all": "electronic_device_mod:block/tv_base",
+    "particle": "electronic_device_mod:block/tv_base",
+    "2": "electronic_device_mod:block/tv_base",
+    "3": "electronic_device_mod:block/screen_off"
+  },
+  "render_type": "solid"
+}

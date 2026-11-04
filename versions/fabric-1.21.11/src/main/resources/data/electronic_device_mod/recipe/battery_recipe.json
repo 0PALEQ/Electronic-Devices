@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "bdb",
+    "bbb"
+  ],
+  "key": {
+    "a": "minecraft:copper_ingot",
+    "b": "electronic_device_mod:silver_nugget",
+    "c": "minecraft:iron_ingot",
+    "d": "minecraft:redstone"
+  },
+  "result": {
+    "id": "electronic_device_mod:battery",
+    "count": 1
+  }
+}

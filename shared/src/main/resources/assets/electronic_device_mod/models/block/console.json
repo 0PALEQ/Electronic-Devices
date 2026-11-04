@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/console",
+  "textures": {
+    "all": "electronic_device_mod:block/console",
+    "particle": "electronic_device_mod:block/console",
+    "1": "electronic_device_mod:block/console",
+    "5": "electronic_device_mod:block/gaming_oads"
+  },
+  "render_type": "solid"
+}

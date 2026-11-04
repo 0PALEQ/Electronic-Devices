@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "cdc"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "electronic_device_mod:screen",
+    "c": "minecraft:iron_ingot",
+    "d": "electronic_device_mod:electronic_parts"
+  },
+  "result": {
+    "id": "electronic_device_mod:tv",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aab",
+    "bcb",
+    "deb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "d": {
+      "item": "minecraft:redstone"
+    },
+    "e": {
+      "tag": "forge:stained_glass_panes"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:black_gaming_pc",
+    "count": 1
+  }
+}

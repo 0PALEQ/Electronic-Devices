@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/router_white",
+  "textures": {
+    "all": "electronic_device_mod:block/routerbodywhite",
+    "particle": "electronic_device_mod:block/routerbodywhite",
+    "0": "electronic_device_mod:block/antenas",
+    "1": "electronic_device_mod:block/routerbodywhite"
+  },
+  "render_type": "solid"
+}

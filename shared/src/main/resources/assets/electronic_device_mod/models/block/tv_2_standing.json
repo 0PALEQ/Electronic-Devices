@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/tv_new_black_standing",
+  "textures": {
+    "all": "electronic_device_mod:block/screen_off",
+    "particle": "electronic_device_mod:block/screen_off",
+    "3": "electronic_device_mod:block/tv_body",
+    "4": "electronic_device_mod:block/screen_off"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/pc1",
+  "textures": {
+    "all": "electronic_device_mod:block/pc1",
+    "particle": "electronic_device_mod:block/pc1",
+    "0": "electronic_device_mod:block/pc1"
+  },
+  "render_type": "solid"
+}

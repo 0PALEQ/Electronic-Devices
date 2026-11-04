@@ -1,0 +1,6 @@
+{
+  "maxMediaUrlLength": 2048,
+  "maxSavedVideosPerTv": 128,
+  "remoteRange": -1,
+  "allowCrossDimensionRemotes": true
+}

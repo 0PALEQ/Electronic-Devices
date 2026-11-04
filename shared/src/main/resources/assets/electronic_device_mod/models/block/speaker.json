@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/speaker",
+  "textures": {
+    "all": "electronic_device_mod:block/speaker_",
+    "particle": "electronic_device_mod:block/speaker_",
+    "0": "electronic_device_mod:block/speaker_",
+    "1": "minecraft:block/stripped_oak_log"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "add"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:silver_nugget"
+    },
+    "b": {
+      "item": "electronic_device_mod:plastic"
+    },
+    "c": {
+      "item": "minecraft:gold_ingot"
+    },
+    "d": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:electronic_parts",
+    "count": 1
+  }
+}

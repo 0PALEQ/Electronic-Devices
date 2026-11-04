@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aaa",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "b": {
+      "item": "electronic_device_mod:electronic_parts"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:gaming_pad",
+    "count": 1
+  }
+}

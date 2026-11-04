@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/tv_remote",
+  "textures": {
+    "all": "electronic_device_mod:block/tv_remote",
+    "particle": "electronic_device_mod:block/tv_remote",
+    "0": "electronic_device_mod:block/tv_remote"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "ded",
+    "ddd"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "b": {
+      "item": "electronic_device_mod:plastic"
+    },
+    "c": {
+      "item": "electronic_device_mod:screen"
+    },
+    "d": {
+      "item": "minecraft:iron_ingot"
+    },
+    "e": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:washing_machine",
+    "count": 1
+  }
+}

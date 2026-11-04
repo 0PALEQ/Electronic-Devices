@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "aba",
+    "cda"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:plastic"
+    },
+    "b": {
+      "item": "minecraft:bucket"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "d": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:blender",
+    "count": 1
+  }
+}

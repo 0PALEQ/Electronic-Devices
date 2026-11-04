@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "electronic_device_mod:tv"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:tv_2_standing",
+    "count": 1
+  }
+}

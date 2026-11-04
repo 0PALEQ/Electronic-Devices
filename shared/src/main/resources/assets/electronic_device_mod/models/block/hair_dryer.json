@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/hair_dryer",
+  "textures": {
+    "all": "electronic_device_mod:block/hair_dryer",
+    "particle": "electronic_device_mod:block/hair_dryer",
+    "0": "electronic_device_mod:block/hair_dryer"
+  },
+  "render_type": "solid"
+}

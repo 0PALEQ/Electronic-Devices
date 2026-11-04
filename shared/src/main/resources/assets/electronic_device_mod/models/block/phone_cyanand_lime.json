@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/plime",
+  "textures": {
+    "all": "electronic_device_mod:block/phonebody_cyanlime",
+    "particle": "electronic_device_mod:block/phonebody_cyanlime",
+    "0": "electronic_device_mod:block/camerascyanlime",
+    "1": "electronic_device_mod:block/phonebody_cyanlime"
+  },
+  "render_type": "solid"
+}

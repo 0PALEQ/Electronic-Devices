@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/white-toaster",
+  "textures": {
+    "all": "electronic_device_mod:block/toaster-white",
+    "particle": "electronic_device_mod:block/toaster-white",
+    "0": "electronic_device_mod:block/toaster-white"
+  },
+  "render_type": "solid"
+}

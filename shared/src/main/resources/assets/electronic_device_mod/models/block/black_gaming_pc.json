@@ -1,0 +1,12 @@
+{
+  "parent": "electronic_device_mod:custom/blackgamingpc",
+  "textures": {
+    "all": "electronic_device_mod:block/fans",
+    "particle": "electronic_device_mod:block/fans",
+    "1": "electronic_device_mod:block/glass",
+    "2": "electronic_device_mod:block/mobo",
+    "3": "electronic_device_mod:block/fans",
+    "4": "electronic_device_mod:block/case"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "electronic_device_mod:item/keyboard"
+  }
+}

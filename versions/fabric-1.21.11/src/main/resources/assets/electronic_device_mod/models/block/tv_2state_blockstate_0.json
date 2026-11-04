@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/tv_new_black_off",
+  "textures": {
+    "all": "electronic_device_mod:block/tvon",
+    "particle": "electronic_device_mod:block/screen_off",
+    "1": "electronic_device_mod:block/tv_body",
+    "2": "electronic_device_mod:block/tvon"
+  },
+  "render_type": "solid"
+}

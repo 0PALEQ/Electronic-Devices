@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "ccc"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:redstone"
+    },
+    "b": {
+      "item": "minecraft:iron_nugget"
+    },
+    "c": {
+      "item": "electronic_device_mod:plastic"
+    },
+    "d": {
+      "item": "minecraft:jukebox"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:turn_table",
+    "count": 1
+  }
+}

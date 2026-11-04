@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/coffee_machine",
+  "textures": {
+    "all": "electronic_device_mod:block/coffee_machine",
+    "particle": "electronic_device_mod:block/coffee_machine",
+    "0": "electronic_device_mod:block/coffee_machine"
+  },
+  "render_type": "solid"
+}

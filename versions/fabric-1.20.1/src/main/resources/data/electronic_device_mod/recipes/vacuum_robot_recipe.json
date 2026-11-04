@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    " d "
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "b": {
+      "item": "minecraft:iron_ingot"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "d": {
+      "item": "electronic_device_mod:battery"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:vacuum_robot",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "electronic_device_mod:custom/1monitor",
+  "textures": {
+    "all": "electronic_device_mod:block/1monitor1",
+    "particle": "electronic_device_mod:block/1monitor1",
+    "0": "electronic_device_mod:block/1monitor1",
+    "1": "electronic_device_mod:block/1monitor2",
+    "2": "electronic_device_mod:block/1monitor3"
+  },
+  "render_type": "solid"
+}

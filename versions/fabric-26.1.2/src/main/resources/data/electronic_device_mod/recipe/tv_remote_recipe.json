@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "ba",
+    "aa"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "electronic_device_mod:electronic_parts"
+  },
+  "result": {
+    "id": "electronic_device_mod:tv_remote",
+    "count": 1
+  }
+}

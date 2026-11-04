@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/coffee_vending_machine",
+  "textures": {
+    "all": "electronic_device_mod:block/coffee_vending_machine",
+    "particle": "electronic_device_mod:block/coffee_vending_machine",
+    "2": "electronic_device_mod:block/bone_block_side",
+    "3": "electronic_device_mod:block/coffee_vending_machine"
+  },
+  "render_type": "solid"
+}

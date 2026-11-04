@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/turntable",
+  "textures": {
+    "all": "electronic_device_mod:block/turntable-texture",
+    "particle": "electronic_device_mod:block/turntable-texture",
+    "0": "electronic_device_mod:block/turntable-texture"
+  },
+  "render_type": "solid"
+}

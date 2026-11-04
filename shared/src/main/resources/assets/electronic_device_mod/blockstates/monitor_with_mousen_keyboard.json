@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "electronic_device_mod:block/monitor_with_mousen_keyboard"
+    },
+    "facing=east": {
+      "model": "electronic_device_mod:block/monitor_with_mousen_keyboard",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "electronic_device_mod:block/monitor_with_mousen_keyboard",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "electronic_device_mod:block/monitor_with_mousen_keyboard",
+      "y": 270
+    }
+  }
+}

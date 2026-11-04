@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "dea"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "b": {
+      "item": "electronic_device_mod:screen"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "d": {
+      "item": "minecraft:pink_dye"
+    },
+    "e": {
+      "item": "electronic_device_mod:battery"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:phone_pink",
+    "count": 1
+  }
+}

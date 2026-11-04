@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "electronic_device_mod:block/gaming_pad"
+    },
+    "facing=east": {
+      "model": "electronic_device_mod:block/gaming_pad",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "electronic_device_mod:block/gaming_pad",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "electronic_device_mod:block/gaming_pad",
+      "y": 270
+    }
+  }
+}

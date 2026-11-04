@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/door_bell_white",
+  "textures": {
+    "all": "electronic_device_mod:block/door_bell_base_white",
+    "particle": "electronic_device_mod:block/door_bell_base_white",
+    "0": "electronic_device_mod:block/door_bell_base_white",
+    "1": "electronic_device_mod:block/door_bell_button"
+  },
+  "render_type": "solid"
+}

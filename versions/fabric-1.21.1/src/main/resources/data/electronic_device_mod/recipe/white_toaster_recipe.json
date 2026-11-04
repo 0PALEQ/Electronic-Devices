@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a a",
+    "a a",
+    "bbb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "electronic_device_mod:plastic"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:white_toaster",
+    "count": 1
+  }
+}

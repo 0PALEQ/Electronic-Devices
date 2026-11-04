@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/games",
+  "textures": {
+    "all": "electronic_device_mod:block/games",
+    "particle": "electronic_device_mod:block/games",
+    "2": "electronic_device_mod:block/games"
+  },
+  "render_type": "solid"
+}

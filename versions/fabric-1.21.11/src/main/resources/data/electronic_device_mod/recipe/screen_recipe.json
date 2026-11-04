@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcd",
+    "aaa"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "#c:glass_panes",
+    "c": "electronic_device_mod:silver_nugget",
+    "d": "electronic_device_mod:electronic_parts"
+  },
+  "result": {
+    "id": "electronic_device_mod:screen",
+    "count": 1
+  }
+}

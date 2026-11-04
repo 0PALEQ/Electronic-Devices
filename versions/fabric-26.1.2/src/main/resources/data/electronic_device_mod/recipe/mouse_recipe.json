@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "electronic_device_mod:electronic_parts"
+  },
+  "result": {
+    "id": "electronic_device_mod:mouse",
+    "count": 1
+  }
+}

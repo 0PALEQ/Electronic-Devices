@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "electronic_device_mod:blocks/double_monitor_2_black",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "electronic_device_mod:double_monitor_2_black"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+[13:26:19] [main/INFO] (Launcher) ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.20.1-5, --assetsDir, C:\Users\opale\.gradle\caches\fabric-loom\assets, --gameDir, ., --fml.forgeVersion, 47.4.1, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412]
+[13:26:19] [main/INFO] (Launcher) ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 21.0.8 by Microsoft; OS Windows 11 arch amd64 version 10.0
+[13:26:19] [main/INFO] (unprotect) Initializing Unprotect using ModLauncher backend, target: Minecraft and loader classes (minecraft+forge)
+[13:26:19] [main/INFO] (ImmediateWindowHandler) Loading ImmediateWindowProvider fmlearlywindow
+[13:26:19] [main/INFO] (EARLYDISPLAY) Trying GL version 4.6
+[13:26:19] [main/INFO] (EARLYDISPLAY) Requested GL version 4.6 got version 4.6
+[13:26:19] [main/INFO] (mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/opale/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.12/cf1f787f58d3b08b0cb53ecbba7928c09a1893c8/mixin-patched-0.8.5.12.jar%23130!/ Service=ModLauncher Env=CLIENT
+[13:26:19] [main/INFO] (ModDiscoverer) Found mod file watermedia-3.0.0.23.jar of type MOD with provider {mods folder locator at D:\MODS-WORKSPACES\Electronic Devices\edm26.8-forge1.20.1\run-client\mods}
+[13:26:19] [main/INFO] (ModDiscoverer) Found mod file watermedia_binaries-3.0.0.6.jar of type MOD with provider {mods folder locator at D:\MODS-WORKSPACES\Electronic Devices\edm26.8-forge1.20.1\run-client\mods}
+[13:26:19] [main/INFO] (ModDiscoverer) Found mod file watermedia_platform_extension-3.0.0-beta.7.jar of type MOD with provider {mods folder locator at D:\MODS-WORKSPACES\Electronic Devices\edm26.8-forge1.20.1\run-client\mods}
+[13:26:19] [pool-2-thread-1/INFO] (EARLYDISPLAY) GL info: NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 610.74, NVIDIA Corporation
+[13:26:20] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.1\97b774cead20444ed9d0c2de762881a15d872397\javafmllanguage-1.20.1-47.4.1.jar is missing mods.toml file
+[13:26:20] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.1\da4a2af4a4ebbbb33e35b292a16fe3f7122b236\lowcodelanguage-1.20.1-47.4.1.jar is missing mods.toml file
+[13:26:20] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.1\75a8f0757adad78cbd8108dff9e0d39cbdb3d787\mclanguage-1.20.1-47.4.1.jar is missing mods.toml file
+[13:26:20] [main/WARN] (ModFileParser) Mod file C:\Users\opale\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.1\3061e70b85c05f936d9fa24477be4d4205d8f6b8\fmlcore-1.20.1-47.4.1.jar is missing mods.toml file
+[13:26:20] [main/INFO] (ModDiscoverer) Found mod file javafmllanguage-1.20.1-47.4.1.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@109f5dd8
+[13:26:20] [main/INFO] (ModDiscoverer) Found mod file lowcodelanguage-1.20.1-47.4.1.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@109f5dd8
+[13:26:20] [main/INFO] (ModDiscoverer) Found mod file mclanguage-1.20.1-47.4.1.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@109f5dd8
+[13:26:20] [main/INFO] (ModDiscoverer) Found mod file fmlcore-1.20.1-47.4.1.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@109f5dd8
+[13:26:20] [main/INFO] (ModDiscoverer) Found mod file forge-1.20.1-47.4.1-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@109f5dd8
+[13:26:20] [main/INFO] (ModDiscoverer) Found mod file main of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@109f5dd8
+[13:26:20] [main/INFO] (ModDiscoverer) Found mod file  of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@109f5dd8
+[13:26:20] [main/INFO] (JarInJarDependencyLocator) No dependencies to load found. Skipping!
+[13:26:21] [main/INFO] (LaunchServiceHandler) Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\opale\.gradle\caches\fabric-loom\assets, --assetIndex, 1.20.1-5]
+[13:26:22] [main/INFO] (unprotect) Found 7431 Minecraft classes
+[04sie2026 13:26:25.763] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 102 milliseconds
+[04sie2026 13:26:27.046] [Render thread/WARN] [net.minecraft.resource.DefaultResourcePackBuilder/]: Assets URL 'union:/C:/Users/opale/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.4.1-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1/forge-1.20.1-47.4.1-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1.jar%23207!/assets/.mcassetsroot' uses unexpected schema
+[04sie2026 13:26:27.046] [Render thread/WARN] [net.minecraft.resource.DefaultResourcePackBuilder/]: Assets URL 'union:/C:/Users/opale/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.4.1-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1/forge-1.20.1-47.4.1-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.10-v2-forge-1.20.1-47.4.1.jar%23207!/data/.mcassetsroot' uses unexpected schema
+[04sie2026 13:26:27.064] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[04sie2026 13:26:27.068] [Render thread/INFO] [net.minecraft.client.MinecraftClient/]: Setting user: Dev
+[04sie2026 13:26:27.160] [Render thread/INFO] [net.minecraft.client.MinecraftClient/]: Backend library: LWJGL version 3.3.2+13
+[04sie2026 13:26:27.377] [modloading-worker-0/INFO] [watermedia_platform_extension/]: Registering platform extension (YouTube + generic yt-dlp) via yt-dlp
+[04sie2026 13:26:27.417] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.1, for MC 1.20.1 with MCP 20230612.114412
+[04sie2026 13:26:27.440] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.1 Initialized
+[04sie2026 13:26:27.441] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Running 'WaterMedia v3.0.0.23' for 'Forge' in client side
+[04sie2026 13:26:27.441] [modloading-worker-0/INFO] [watermedia/WaterMedia]: OS Detected: Windows 11 (amd64) - Java: 21.0.8
+[04sie2026 13:26:27.441] [modloading-worker-0/INFO] [watermedia/WaterMedia]: RAM stats (used/total/max): 334/432/8164 MB
+[04sie2026 13:26:27.441] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Process PATH: D:\MODS-WORKSPACES\Electronic Devices\edm26.8-forge1.20.1\run-client
+[04sie2026 13:26:27.441] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Temp folder PATH: C:\Users\opale\AppData\Local\Temp\watermedia
+[04sie2026 13:26:27.442] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Starting WaterMediaBinaries (1/6)
+[04sie2026 13:26:27.442] [modloading-worker-0/INFO] [watermedia_binaries/WaterMediaBinaries]: Resolving binaries paths
+[04sie2026 13:26:27.442] [modloading-worker-0/INFO] [watermedia_binaries/WaterMediaBinaries]: Starting binaries extraction in path: C:\Users\opale\AppData\Local\Temp\watermedia
+[04sie2026 13:26:27.441] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered YouTube platform
+[04sie2026 13:26:27.445] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered yt-dlp platform
+[04sie2026 13:26:27.876] [modloading-worker-0/INFO] [watermedia_binaries/FFmpegBinaries]: FFMPEG in JAR | Version: 8.0.1-gpl - Path: libs/ffmpeg-windows.zip
+[04sie2026 13:26:27.876] [modloading-worker-0/INFO] [watermedia_binaries/FFmpegBinaries]: FFMPEG extracted | Version: 8.0.1-gpl - Path: C:\Users\opale\AppData\Local\Temp\watermedia\ffmpeg
+[04sie2026 13:26:27.877] [modloading-worker-0/INFO] [watermedia_binaries/FFmpegBinaries]: FFmpeg already up to date, skipping extraction
+[04sie2026 13:26:27.877] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Starting WaterMediaConfig (2/6)
+[04sie2026 13:26:27.939] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Starting CodecsAPI (3/6)
+[04sie2026 13:26:27.939] [modloading-worker-0/INFO] [watermedia/CodecsAPI]: No block-compression codecs available (native BC bindings absent)
+[04sie2026 13:26:27.940] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Starting PlatformAPI (4/6)
+[04sie2026 13:26:27.967] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: Registering supported platforms
+[04sie2026 13:26:27.967] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered WaterMedia Internal platform
+[04sie2026 13:26:27.967] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Imgur platform
+[04sie2026 13:26:27.967] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Kick platform
+[04sie2026 13:26:27.968] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Streamable platform
+[04sie2026 13:26:27.968] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Medal platform
+[04sie2026 13:26:27.968] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered PornHub platform
+[04sie2026 13:26:27.968] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Lightshot platform
+[04sie2026 13:26:27.968] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Twitch platform
+[04sie2026 13:26:27.968] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Twitter platform
+[04sie2026 13:26:27.968] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Bluesky platform
+[04sie2026 13:26:27.969] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered BiliBili platform
+[04sie2026 13:26:27.969] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Google Drive platform
+[04sie2026 13:26:27.969] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Dropbox platform
+[04sie2026 13:26:27.969] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered MediaFire platform
+[04sie2026 13:26:27.969] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Sendvid platform
+[04sie2026 13:26:27.969] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered Odysee platform
+[04sie2026 13:26:27.969] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered VidLii platform
+[04sie2026 13:26:27.970] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered TikTok platform
+[04sie2026 13:26:27.970] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered D.tube platform
+[04sie2026 13:26:27.970] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered yt-dlp platform
+[04sie2026 13:26:27.970] [modloading-worker-0/INFO] [watermedia/PlatformAPI]: • Registered YouTube platform
+[04sie2026 13:26:27.970] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Starting MediaAPI (5/6)
+[04sie2026 13:26:27.970] [modloading-worker-0/INFO] [watermedia/MediaAPI]: Starting media network cache
+[04sie2026 13:26:27.987] [modloading-worker-0/INFO] [watermedia/NetworkCache]: Media network cache initialized at C:\Users\opale\AppData\Local\Temp\watermedia\cache (mode=DISK)
+[04sie2026 13:26:27.987] [modloading-worker-0/INFO] [watermedia/MediaAPI]: Starting media engines
+[04sie2026 13:26:27.987] [modloading-worker-0/INFO] [watermedia/MediaAPI]: Starting FFMPEG...
+[04sie2026 13:26:27.987] [modloading-worker-0/INFO] [watermedia/MediaAPI]: Configured JavaCPP bindings with: C:\Users\opale\AppData\Local\Temp\watermedia\ffmpeg;D:\MODS-WORKSPACES\Electronic Devices\edm26.8-forge1.20.1\run-client
+[04sie2026 13:26:27.987] [modloading-worker-0/INFO] [watermedia/MediaAPI]: === FFMPEG Build Info ===
+[04sie2026 13:26:29.407] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • avformat: 4064100
+[04sie2026 13:26:29.408] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • avcodec:  4066148
+[04sie2026 13:26:29.408] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • avutil:   3934308
+[04sie2026 13:26:29.425] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • swscale:  590180
+[04sie2026 13:26:29.425] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • swresample: 393572
+[04sie2026 13:26:29.428] [modloading-worker-0/INFO] [watermedia/MediaAPI]: Configuration: --prefix=.. --disable-iconv --disable-opencl --disable-sdl2 --disable-bzlib --disable-lzma --disable-linux-perf --disable-xlib --enable-shared --enable-version3 --enable-runtime-cpudetect --enable-zlib --enable-libmp3lame --enable-libspeex --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-openssl --enable-libopenh264 --enable-libvpx --enable-libfreetype --enable-libharfbuzz --enable-libopus --enable-libxml2 --enable-libsrt --enable-libwebp --enable-libaom --enable-libsvtav1 --enable-libzimg --enable-gpl --enable-version3 --enable-libx264 --enable-libx265 --enable-vulkan --enable-hwaccel=h264_vulkan --enable-hwaccel=hevc_vulkan --enable-hwaccel=av1_vulkan --enable-cuda --enable-cuvid --enable-nvenc --enable-libmfx --enable-w32threads --enable-indev=dshow --target-os=mingw32 --cc='gcc -m64' --extra-cflags='-DLIBXML_STATIC -I../include/ -I../include/libxml2 -I../include/mfx/ -I../include/svt-av1' --extra-ldflags=-L../lib/ --extra-libs='-static-libgcc -static-libstdc++ -Wl,-Bstatic -lstdc++ -lgcc_eh -lWs2_32 -lcrypt32 -lpthread -lz -lm -Wl,-Bdynamic -lole32 -luuid'
+[04sie2026 13:26:29.428] [modloading-worker-0/INFO] [watermedia/MediaAPI]: Hardware Acceleration:
+[04sie2026 13:26:29.429] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • cuda
+[04sie2026 13:26:29.429] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • dxva2
+[04sie2026 13:26:29.429] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • qsv
+[04sie2026 13:26:29.429] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • d3d11va
+[04sie2026 13:26:29.429] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • vulkan
+[04sie2026 13:26:29.429] [modloading-worker-0/INFO] [watermedia/MediaAPI]: • d3d12va
+[04sie2026 13:26:29.755] [modloading-worker-0/INFO] [watermedia/MediaAPI]: Vulkan hardware decode: available (zero-copy GPU import needs AVVkFrame JNI, absent here — software decode + host-import is used)
+[04sie2026 13:26:29.755] [modloading-worker-0/INFO] [watermedia/MediaAPI]: FFMPEG started, running version 4064100 under GPL version 3 or later
+[04sie2026 13:26:29.756] [modloading-worker-0/INFO] [watermedia/WaterMedia]: Starting NetworkAPI (6/6)
+[04sie2026 13:26:29.761] [modloading-worker-0/INFO] [watermedia/NetworkAPI]: Network server is NOT enabled on this environment
+[04sie2026 13:26:29.761] [modloading-worker-0/INFO] [watermedia/WaterMedia]: WaterMedia initialized successfully
+[04sie2026 13:26:30.406] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[04sie2026 13:26:30.488] [Render thread/INFO] [net.minecraft.resource.ReloadableResourceManagerImpl/]: Reloading ResourceManager: vanilla, mod_resources
+[04sie2026 13:26:30.618] [Worker-Main-12/INFO] [net.minecraft.client.font.UnihexFont/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[04sie2026 13:26:30.626] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [watermedia_binaries] Starting version check at https://forge.curseupdate.com/1029438/watermedia-binaries
+[04sie2026 13:26:30.827] [Worker-Main-11/WARN] [net.minecraft.client.texture.SpriteLoader/]: Texture electronic_device_mod:block/sunflower_field with size 248x128 limits mip level from 4 to 3
+[04sie2026 13:26:31.104] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [watermedia_binaries] Found status: BETA Current: 3.0.0.6 Target: null
+[04sie2026 13:26:31.104] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[04sie2026 13:26:31.262] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.4.1 Target: 47.4.10
+[04sie2026 13:26:31.262] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [watermedia_platform_extension] Starting version check at https://forge.curseupdate.com/1395870/watermedia-yt-plugin
+[04sie2026 13:26:31.278] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [watermedia_platform_extension] Found status: BETA Current: 3.0.0-beta.7 Target: null
+[04sie2026 13:26:31.278] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [watermedia] Starting version check at https://forge.curseupdate.com/869524/watermedia
+[04sie2026 13:26:31.294] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [watermedia] Found status: AHEAD Current: 3.0.0.23 Target: null
+[04sie2026 13:26:33.030] [Render thread/WARN] [net.minecraft.client.sound.SoundSystem/]: Missing sound for event: minecraft:item.goat_horn.play
+[04sie2026 13:26:33.032] [Render thread/WARN] [net.minecraft.client.sound.SoundSystem/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[04sie2026 13:26:33.064] [Render thread/INFO] [net.minecraft.client.sound.SoundEngine/]: OpenAL initialized on device OpenAL Soft on IXO22 (3 — Steinberg IXO22)
+[04sie2026 13:26:33.066] [Render thread/INFO] [net.minecraft.client.sound.SoundSystem/SOUNDS]: Sound engine started
+[04sie2026 13:26:33.195] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[04sie2026 13:26:33.206] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[04sie2026 13:26:33.212] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[04sie2026 13:26:33.213] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[04sie2026 13:26:33.213] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[04sie2026 13:26:33.214] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[04sie2026 13:26:33.217] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[04sie2026 13:26:33.217] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[04sie2026 13:26:33.217] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[04sie2026 13:26:33.422] [Render thread/WARN] [net.minecraft.client.gl.ShaderProgram/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[04sie2026 13:26:33.483] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[04sie2026 13:26:33.485] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[04sie2026 13:26:33.485] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[04sie2026 13:26:33.657] [Realms Notification Availability checker #1/INFO] [net.minecraft.client.realms.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[04sie2026 13:26:39.877] [Render thread/WARN] [net.minecraftforge.common.ForgeHooks/WP]: The following mods have version differences that were not resolved:
+electronic_device_mod (version 26.8.5 -> 26.8)
+forge (version 47.4.22 -> 47.4.1)
+Things may not work well.
+[04sie2026 13:26:41.590] [Render thread/INFO] [net.minecraft.recipe.RecipeManager/]: Loaded 7 recipes
+[04sie2026 13:26:41.672] [Render thread/INFO] [net.minecraft.advancement.AdvancementManager/]: Loaded 1271 advancements
+[04sie2026 13:26:42.059] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[04sie2026 13:26:42.059] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[04sie2026 13:26:45.325] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[04sie2026 13:26:45.738] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[04sie2026 13:26:45.938] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[04sie2026 13:26:46.342] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[04sie2026 13:26:46.828] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 1%
+[04sie2026 13:26:47.345] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 4%
+[04sie2026 13:26:47.832] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 8%
+[04sie2026 13:26:48.342] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 13%
+[04sie2026 13:26:48.836] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 15%
+[04sie2026 13:26:49.329] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 20%
+[04sie2026 13:26:49.831] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 25%
+[04sie2026 13:26:50.329] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 31%
+[04sie2026 13:26:50.843] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 35%
+[04sie2026 13:26:51.334] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 42%
+[04sie2026 13:26:51.836] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 46%
+[04sie2026 13:26:52.343] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 52%
+[04sie2026 13:26:52.839] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 56%
+[04sie2026 13:26:53.331] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 62%
+[04sie2026 13:26:53.835] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 68%
+[04sie2026 13:26:54.345] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 73%
+[04sie2026 13:26:54.843] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 79%
+[04sie2026 13:26:55.331] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 85%
+[04sie2026 13:26:55.835] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 88%
+[04sie2026 13:26:56.333] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 96%
+[04sie2026 13:26:56.541] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Time elapsed: 11214 ms
+[04sie2026 13:26:56.541] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[04sie2026 13:26:56.633] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 12, from 10
+[04sie2026 13:26:56.634] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing simulation distance to 12, from 0
+[04sie2026 13:26:56.795] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[04sie2026 13:26:57.469] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[04sie2026 13:26:57.538] [Server thread/INFO] [net.minecraft.server.PlayerManager/]: Dev[local:E:08390527] logged in with entity id 257 at (-67.5, 101.0, -105.5)
+[04sie2026 13:26:57.623] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[04sie2026 13:26:58.248] [Render thread/INFO] [net.minecraft.advancement.AdvancementManager/]: Loaded 2 advancements
+[04sie2026 13:26:58.760] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[04sie2026 13:26:58.781] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[04sie2026 13:26:59.032] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[04sie2026 13:26:59.034] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether

@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/ppink",
+  "textures": {
+    "all": "electronic_device_mod:block/phonebody_pink",
+    "particle": "electronic_device_mod:block/phonebody_pink",
+    "0": "electronic_device_mod:block/cameraspink",
+    "1": "electronic_device_mod:block/phonebody_pink"
+  },
+  "render_type": "solid"
+}

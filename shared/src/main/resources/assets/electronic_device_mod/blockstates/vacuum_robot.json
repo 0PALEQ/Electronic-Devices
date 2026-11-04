@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "electronic_device_mod:block/vacuum_robot"
+    },
+    "facing=east": {
+      "model": "electronic_device_mod:block/vacuum_robot",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "electronic_device_mod:block/vacuum_robot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "electronic_device_mod:block/vacuum_robot",
+      "y": 270
+    }
+  }
+}

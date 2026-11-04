@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/mousenkeyboard",
+  "textures": {
+    "all": "electronic_device_mod:block/mousenkeyboard",
+    "particle": "electronic_device_mod:block/mousenkeyboard",
+    "0": "electronic_device_mod:block/mousenkeyboard"
+  },
+  "render_type": "solid"
+}

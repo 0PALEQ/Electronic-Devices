@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab"
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:mouse"
+    },
+    "b": {
+      "item": "electronic_device_mod:keyboard"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:mousen_keyboard",
+    "count": 1
+  }
+}

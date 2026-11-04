@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "tag": "forge:stained_glass_panes"
+    },
+    "c": {
+      "item": "electronic_device_mod:electronic_parts"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:vending_machine",
+    "count": 1
+  }
+}

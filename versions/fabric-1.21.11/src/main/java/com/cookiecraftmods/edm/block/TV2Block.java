@@ -1,0 +1,105 @@
+
+package com.cookiecraftmods.edm.block;
+
+import com.cookiecraftmods.edm.ElectronicDeviceMod;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.util.Identifier;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockEntityProvider;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.HorizontalFacingBlock;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.enums.NoteBlockInstrument;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.IntProperty;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
+import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import com.cookiecraftmods.edm.block.entity.TvBlockEntity;
+import org.jetbrains.annotations.Nullable;
+
+public class TV2Block extends Block implements BlockEntityProvider, TvDevice {
+	public static final IntProperty BLOCKSTATE = DISPLAY_STATE;
+	public static final EnumProperty<Direction> FACING = HorizontalFacingBlock.FACING;
+
+	public TV2Block() {
+		super(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(ElectronicDeviceMod.MOD_ID, "tv_2"))).instrument(NoteBlockInstrument.BASEDRUM).sounds(BlockSoundGroup.STONE).strength(1f, 10f).nonOpaque().solidBlock((bs, br, bp) -> false));
+		this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(BLOCKSTATE, 0));
+	}
+
+	@Override
+	public boolean isTransparent(BlockState state) {
+		return true;
+	}
+
+	@Override
+	public int getOpacity(BlockState state) {
+		return 0;
+	}
+
+	@Override
+	public VoxelShape getCameraCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+		return VoxelShapes.empty();
+	}
+
+	@Override
+	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+		return switch (state.get(FACING)) {
+			default -> createCuboidShape(-16, 0, 0, 32, 27, 2);
+			case NORTH -> createCuboidShape(-16, 0, 14, 32, 27, 16);
+			case EAST -> createCuboidShape(0, 0, -16, 2, 27, 32);
+			case WEST -> createCuboidShape(14, 0, -16, 16, 27, 32);
+		};
+	}
+
+	@Override
+	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+		super.appendProperties(builder);
+		builder.add(FACING, BLOCKSTATE);
+	}
+
+	@Override
+	public BlockState getPlacementState(ItemPlacementContext context) {
+		return super.getPlacementState(context).with(FACING, context.getHorizontalPlayerFacing().getOpposite());
+	}
+
+	public BlockState rotate(BlockState state, BlockRotation rot) {
+		return state.with(FACING, rot.rotate(state.get(FACING)));
+	}
+
+	public BlockState mirror(BlockState state, BlockMirror mirrorIn) {
+		return state.rotate(mirrorIn.getRotation(state.get(FACING)));
+	}
+
+	@Override
+	public ActionResult onUse(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, BlockHitResult hit) {
+		return TvDevice.onUse(blockstate, world, pos, entity, hit);
+	}
+
+	@Override
+	public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+		super.onPlaced(world, pos, state, placer, itemStack);
+		TvDevice.onPlaced(world, pos, placer, itemStack);
+	}
+
+	@Override
+	public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+		return new TvBlockEntity(pos, state);
+	}
+}

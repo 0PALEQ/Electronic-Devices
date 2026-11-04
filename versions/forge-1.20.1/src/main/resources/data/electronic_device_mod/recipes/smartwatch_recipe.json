@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "bcd",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "electronic_device_mod:black_plastick"
+    },
+    "b": {
+      "item": "electronic_device_mod:electronic_parts"
+    },
+    "c": {
+      "item": "electronic_device_mod:screen"
+    },
+    "d": {
+      "item": "electronic_device_mod:battery"
+    }
+  },
+  "result": {
+    "item": "electronic_device_mod:smartwatch",
+    "count": 1
+  }
+}

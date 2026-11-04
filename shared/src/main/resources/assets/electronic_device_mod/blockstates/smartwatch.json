@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "electronic_device_mod:block/smartwatch"
+    }
+  }
+}

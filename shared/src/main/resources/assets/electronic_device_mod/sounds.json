@@ -1,0 +1,10 @@
+{
+  "doorbell": {
+    "sounds": [
+      {
+        "name": "electronic_device_mod:doorbell",
+        "stream": false
+      }
+    ]
+  }
+}

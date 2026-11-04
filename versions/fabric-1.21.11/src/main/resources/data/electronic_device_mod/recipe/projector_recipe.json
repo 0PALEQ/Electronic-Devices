@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bca",
+    "ada"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "minecraft:glass_pane",
+    "c": "electronic_device_mod:electronic_parts",
+    "d": "minecraft:redstone_lamp"
+  },
+  "result": {
+    "id": "electronic_device_mod:projector",
+    "count": 1
+  }
+}

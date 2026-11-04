@@ -1,0 +1,11 @@
+{
+  "parent": "electronic_device_mod:custom/black_smartwatch",
+  "textures": {
+    "all": "electronic_device_mod:block/smartwatch_body",
+    "particle": "electronic_device_mod:block/smartwatch_body",
+    "0": "electronic_device_mod:block/smartwatch_body",
+    "1": "electronic_device_mod:block/smartwatch_screen",
+    "2": "electronic_device_mod:block/smartwatch_buttons"
+  },
+  "render_type": "solid"
+}

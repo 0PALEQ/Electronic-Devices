@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "dea"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "electronic_device_mod:screen",
+    "c": "electronic_device_mod:electronic_parts",
+    "d": "minecraft:yellow_dye",
+    "e": "electronic_device_mod:battery"
+  },
+  "result": {
+    "id": "electronic_device_mod:phone_desert",
+    "count": 1
+  }
+}

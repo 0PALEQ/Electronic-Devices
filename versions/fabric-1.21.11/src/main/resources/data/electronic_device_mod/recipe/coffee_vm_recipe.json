@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aca"
+  ],
+  "key": {
+    "a": "minecraft:iron_ingot",
+    "b": "electronic_device_mod:electronic_parts",
+    "c": "minecraft:cocoa_beans"
+  },
+  "result": {
+    "id": "electronic_device_mod:coffee_vending_machine",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/drone",
+  "textures": {
+    "all": "electronic_device_mod:block/drone",
+    "particle": "electronic_device_mod:block/drone",
+    "0": "electronic_device_mod:block/drone"
+  },
+  "render_type": "solid"
+}

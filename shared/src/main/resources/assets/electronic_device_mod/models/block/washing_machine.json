@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/washing_machine",
+  "textures": {
+    "all": "electronic_device_mod:block/washingmachine1",
+    "particle": "electronic_device_mod:block/washingmachine1",
+    "0": "electronic_device_mod:block/washingmachine1",
+    "1": "electronic_device_mod:block/washingmachine2"
+  },
+  "render_type": "solid"
+}

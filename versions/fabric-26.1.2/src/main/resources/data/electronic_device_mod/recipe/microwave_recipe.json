@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "a d",
+    "abb"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "minecraft:iron_ingot",
+    "c": "electronic_device_mod:electronic_parts",
+    "d": "electronic_device_mod:screen"
+  },
+  "result": {
+    "id": "electronic_device_mod:microwave_oven",
+    "count": 1
+  }
+}

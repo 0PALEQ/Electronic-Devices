@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/phone",
+  "textures": {
+    "all": "electronic_device_mod:block/phoneblue",
+    "particle": "electronic_device_mod:block/phoneblue",
+    "0": "electronic_device_mod:block/phoneblue"
+  },
+  "render_type": "solid"
+}

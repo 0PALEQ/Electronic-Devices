@@ -1,0 +1,11 @@
+{
+  "parent": "electronic_device_mod:custom/monitor_new_black_with_mnk",
+  "textures": {
+    "all": "electronic_device_mod:block/intellij-edm-display-screen",
+    "particle": "electronic_device_mod:block/intellij-edm-display-screen",
+    "0": "electronic_device_mod:block/screen_off",
+    "1": "electronic_device_mod:block/newmonitorbasewhite",
+    "1_0": "electronic_device_mod:block/mousenkeyboard"
+  },
+  "render_type": "solid"
+}

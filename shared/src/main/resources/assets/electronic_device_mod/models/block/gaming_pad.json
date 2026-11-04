@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/gamin_pad",
+  "textures": {
+    "all": "electronic_device_mod:block/gaming_oads",
+    "particle": "electronic_device_mod:block/gaming_oads",
+    "0": "electronic_device_mod:block/gaming_oads"
+  },
+  "render_type": "solid"
+}

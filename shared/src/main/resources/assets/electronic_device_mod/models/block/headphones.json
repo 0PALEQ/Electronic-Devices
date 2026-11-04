@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/headphones_black",
+  "textures": {
+    "all": "electronic_device_mod:block/black_headphones",
+    "particle": "electronic_device_mod:block/black_headphones",
+    "0": "electronic_device_mod:block/black_headphones"
+  },
+  "render_type": "solid"
+}

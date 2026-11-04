@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "electronic_device_mod:blocks/tv_remote",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "electronic_device_mod:tv_remote",
+          "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "EdmTvDimension",
+                  "target": "EdmTvDimension",
+                  "op": "replace"
+                },
+                {
+                  "source": "EdmTvPosition",
+                  "target": "EdmTvPosition",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cda",
+    "efa"
+  ],
+  "key": {
+    "a": "electronic_device_mod:black_plastick",
+    "b": "electronic_device_mod:screen",
+    "c": "minecraft:lime_dye",
+    "d": "electronic_device_mod:electronic_parts",
+    "e": "minecraft:cyan_dye",
+    "f": "electronic_device_mod:battery"
+  },
+  "result": {
+    "id": "electronic_device_mod:phone_cyanand_lime",
+    "count": 1
+  }
+}

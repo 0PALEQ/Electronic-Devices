@@ -1,0 +1,9 @@
+{
+  "parent": "electronic_device_mod:custom/blender",
+  "textures": {
+    "all": "electronic_device_mod:block/blender",
+    "particle": "electronic_device_mod:block/blender",
+    "0": "electronic_device_mod:block/blender"
+  },
+  "render_type": "solid"
+}

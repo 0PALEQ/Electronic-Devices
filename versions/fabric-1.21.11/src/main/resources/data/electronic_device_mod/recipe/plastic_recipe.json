@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc"
+  ],
+  "key": {
+    "a": "minecraft:kelp",
+    "b": "minecraft:charcoal",
+    "c": "minecraft:sugar_cane"
+  },
+  "result": {
+    "id": "electronic_device_mod:plastic",
+    "count": 2
+  }
+}

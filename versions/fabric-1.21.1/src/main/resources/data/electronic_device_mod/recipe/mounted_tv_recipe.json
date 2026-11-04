@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_nugget"
+    },
+    "b": {
+      "item": "electronic_device_mod:tv"
+    }
+  },
+  "result": {
+    "id": "electronic_device_mod:mounted_tv",
+    "count": 1
+  }
+}

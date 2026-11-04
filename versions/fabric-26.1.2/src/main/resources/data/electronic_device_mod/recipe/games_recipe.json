@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "a"
+  ],
+  "key": {
+    "a": "electronic_device_mod:plastic",
+    "b": "electronic_device_mod:silver_nugget"
+  },
+  "result": {
+    "id": "electronic_device_mod:games",
+    "count": 1
+  }
+}

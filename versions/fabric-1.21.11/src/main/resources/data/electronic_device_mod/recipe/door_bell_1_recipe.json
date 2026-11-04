@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a ",
+    "bc"
+  ],
+  "key": {
+    "a": "minecraft:stone_button",
+    "b": "minecraft:redstone",
+    "c": "minecraft:black_dye"
+  },
+  "result": {
+    "id": "electronic_device_mod:black_door_bell",
+    "count": 1
+  }
+}

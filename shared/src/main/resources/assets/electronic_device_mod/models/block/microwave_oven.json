@@ -1,0 +1,10 @@
+{
+  "parent": "electronic_device_mod:custom/microwave_oven",
+  "textures": {
+    "all": "electronic_device_mod:block/mv_o_body",
+    "particle": "electronic_device_mod:block/mv_o_body",
+    "0": "electronic_device_mod:block/mv_o_hands",
+    "1": "electronic_device_mod:block/mv_o_body"
+  },
+  "render_type": "solid"
+}

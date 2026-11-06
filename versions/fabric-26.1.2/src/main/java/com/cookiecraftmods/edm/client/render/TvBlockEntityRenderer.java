@@ -58,10 +58,10 @@ public final class TvBlockEntityRenderer implements BlockEntityRenderer<TvBlockE
 		matrices.mulPose(Axis.YP.rotationDegrees(rotation(state.tvBlockState)));
 		matrices.translate(-0.5, 0, -0.5);
 
-		// Use Minecraft's complete emissive-entity path rather than a bare unlit quad.
+		// Use Minecraft's complete opaque-entity path rather than a bare unlit quad.
 		// Shader packs replace vanilla programs and expect these color, overlay, light,
 		// and normal attributes; leaving them absent can make the sampled video yellow.
-		RenderType layer = RenderTypes.entityTranslucentEmissive(state.videoTexture);
+		RenderType layer = RenderTypes.entitySolid(state.videoTexture);
 		queue.submitCustomGeometry(matrices, layer, (entry, vertexConsumer) -> {
 			Matrix4f matrix = entry.pose();
 			vertex(vertexConsumer, matrix, entry, area.minX, area.minY, area.z, 1, 1);

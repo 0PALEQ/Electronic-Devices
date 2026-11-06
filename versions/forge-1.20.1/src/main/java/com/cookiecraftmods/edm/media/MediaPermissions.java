@@ -34,8 +34,12 @@ public final class MediaPermissions {
 		event.addNodes(MANAGE_OTHERS_NODE, ASSIGN_URL_NODE);
 	}
 
+	public static boolean canManageWhitelist(ServerPlayerEntity player) {
+		return player.hasPermissionLevel(2);
+	}
+
 	public static void checkSource(ServerPlayerEntity player, String url) {
 		MediaConfig config = MediaConfig.get();
-		config.mediaSources.check(url, config.maxMediaUrlLength, player.hasPermissionLevel(2));
+		config.mediaSources.check(url, config.maxMediaUrlLength, config.mediaSources.linkWhitelistMode || canManageWhitelist(player));
 	}
 }

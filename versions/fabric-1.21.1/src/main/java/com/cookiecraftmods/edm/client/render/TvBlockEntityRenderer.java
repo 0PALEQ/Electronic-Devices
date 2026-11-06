@@ -48,9 +48,9 @@ public final class TvBlockEntityRenderer implements BlockEntityRenderer<TvBlockE
 		MatrixStack.Entry entry = matrices.peek();
 		float[] previousShaderColor = RenderSystem.getShaderColor().clone();
 
-		RenderSystem.enableBlend();
+		// The display is an opaque surface; decoder alpha must not blend with the room.
+		RenderSystem.disableBlend();
 		RenderSystem.disableCull();
-		RenderSystem.defaultBlendFunc();
 		// This draws a raw quad outside the normal RenderLayer/VertexConsumerProvider pipeline,
 		// so depth testing isn't inherited from a RenderLayer's phases and must be requested here —
 		// otherwise the screen renders regardless of blocks standing between it and the camera.
@@ -58,10 +58,10 @@ public final class TvBlockEntityRenderer implements BlockEntityRenderer<TvBlockE
 		RenderSystem.depthFunc(GL11.GL_LEQUAL);
 		RenderSystem.depthMask(true);
 		RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
-		// Use Minecraft's complete emissive-entity path rather than POSITION_TEXTURE.
+		// Use Minecraft's complete opaque-entity path rather than POSITION_TEXTURE.
 		// Shader packs replace vanilla programs and expect these color, overlay, light,
 		// and normal attributes; leaving them absent can make the sampled video yellow.
-		RenderSystem.setShader(GameRenderer::getRenderTypeEntityTranslucentEmissiveProgram);
+		RenderSystem.setShader(GameRenderer::getRenderTypeEntitySolidProgram);
 		RenderSystem.setShaderTexture(0, texture);
 		BufferBuilder buffer = Tessellator.getInstance()
 			.begin(VertexFormat.DrawMode.QUADS, VertexFormats.POSITION_COLOR_TEXTURE_OVERLAY_LIGHT_NORMAL);

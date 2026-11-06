@@ -1,5 +1,5 @@
 {
-  "parent": "electronic_device_mod:custom/tv_16-9",
+  "parent": "electronic_device_mod:custom/tv_16-9_video",
   "textures": {
     "all": "electronic_device_mod:block/tv_base",
     "particle": "electronic_device_mod:block/tv_base",

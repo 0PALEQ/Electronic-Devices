@@ -21,11 +21,12 @@ public final class ElectronicDeviceModClient {
 	public static void openMediaScreen(
 		Identifier dimension, BlockPos pos, long menuToken, List<String> mediaUrls,
 		int selectedMediaIndex, long playbackPosition, int maxUrlLength, int maxSavedVideos,
-		int volume, boolean powered, boolean canEdit
+		int volume, boolean powered, boolean canEdit, boolean refreshOnly
 	) {
 		MinecraftClient client = MinecraftClient.getInstance();
 		client.execute(() -> {
-			int page = client.currentScreen instanceof MediaScreen screen && screen.isFor(dimension, pos)
+			if (refreshOnly && !(client.currentScreen instanceof MediaScreen current && current.isFor(dimension, pos))) return;
+		int page = client.currentScreen instanceof MediaScreen screen && screen.isFor(dimension, pos)
 				? screen.getPage() : 0;
 			client.setScreen(new MediaScreen(
 				dimension, pos, menuToken, mediaUrls, selectedMediaIndex, playbackPosition,

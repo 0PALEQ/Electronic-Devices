@@ -18,8 +18,12 @@ public final class MediaPermissions {
 		return Permissions.check(player, ASSIGN_URL, 0);
 	}
 
+	public static boolean canManageWhitelist(ServerPlayer player) {
+		return Permissions.check(player, "electronic_device_mod.media.admin", 2);
+	}
+
 	public static void checkSource(ServerPlayer player, String url) {
 		MediaConfig config = MediaConfig.get();
-		config.mediaSources.check(url, config.maxMediaUrlLength, Permissions.check(player, "electronic_device_mod.media.admin", 2));
+		config.mediaSources.check(url, config.maxMediaUrlLength, config.mediaSources.linkWhitelistMode || canManageWhitelist(player));
 	}
 }

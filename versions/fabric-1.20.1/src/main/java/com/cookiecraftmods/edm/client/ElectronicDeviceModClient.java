@@ -39,7 +39,9 @@ public final class ElectronicDeviceModClient implements ClientModInitializer {
 			int volume = buffer.readVarInt();
 			boolean powered = buffer.readBoolean();
 			boolean canEdit = buffer.readBoolean();
+			boolean refreshOnly = buffer.readBoolean();
 			client.execute(() -> {
+				if (refreshOnly && !(client.currentScreen instanceof MediaScreen current && current.isFor(dimension, pos))) return;
 				int page = client.currentScreen instanceof MediaScreen screen && screen.isFor(dimension, pos)
 					? screen.getPage() : 0;
 				client.setScreen(new MediaScreen(

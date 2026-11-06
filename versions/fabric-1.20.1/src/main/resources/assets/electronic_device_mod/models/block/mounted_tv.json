@@ -1,5 +1,5 @@
 {
-  "parent": "electronic_device_mod:custom/hanging_tv_16-9",
+  "parent": "electronic_device_mod:custom/hanging_tv_16-9_video",
   "textures": {
     "all": "electronic_device_mod:block/sunflower_field",
     "particle": "electronic_device_mod:block/sunflower_field",

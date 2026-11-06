@@ -302,7 +302,7 @@ public final class WaterMediaBridge {
 			Object result = invokePlayer(texture);
 			if (!(result instanceof Number value)) return -1;
 			int textureId = (int) value.longValue();
-			return textureId > 0 ? textureId : -1;
+			return com.cookiecraftmods.edm.client.render.OpaqueVideoTexture.prepare(textureId);
 		}
 
 		@Override

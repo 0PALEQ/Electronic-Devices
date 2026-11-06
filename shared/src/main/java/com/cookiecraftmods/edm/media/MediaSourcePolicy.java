@@ -45,6 +45,16 @@ public final class MediaSourcePolicy {
         public boolean requireAdmin = false;
     }
 
+    /** Exact approved links, shared by every TV on this server. */
+    public boolean linkWhitelistMode = false;
+    public List<String> approvedLinks = new ArrayList<>();
+
+    public void checkApproved(String url) {
+        if (linkWhitelistMode && !approvedLinks.contains(url)) {
+            throw new IllegalArgumentException("This link is not in the server's approved media list.");
+        }
+    }
+
     public Map<String, Rule> sources = defaults();
     /** Additional adult-site domains, without schemes or paths. Subdomains are included. */
     public List<String> additionalAdultDomains = new ArrayList<>();
@@ -57,6 +67,15 @@ public final class MediaSourcePolicy {
     }
 
     public void sanitize() {
+        if (approvedLinks == null) approvedLinks = new ArrayList<>();
+        List<String> validLinks = new ArrayList<>();
+        for (String link : approvedLinks) {
+            try {
+                String valid = MediaUrl.validate(link, 8192);
+                if (!validLinks.contains(valid) && validLinks.size() < 128) validLinks.add(valid);
+            } catch (IllegalArgumentException ignored) { }
+        }
+        approvedLinks = validLinks;
         if (sources == null) sources = defaults();
         // Migrate the former platform-specific setting without losing its restrictions.
         Rule legacy = sources.remove("pornhub");
@@ -96,6 +115,7 @@ public final class MediaSourcePolicy {
 
     public void check(String url, int maxLength, boolean administrator) {
         String validated = MediaUrl.validate(url, maxLength);
+        checkApproved(validated);
         String source = sourceOf(validated);
         URI uri = URI.create(validated);
         if (uri.getScheme().equals("http") || uri.getScheme().equals("https")) {

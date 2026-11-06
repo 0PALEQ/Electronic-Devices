@@ -19,6 +19,20 @@ import java.util.List;
 import java.util.UUID;
 
 public class TvBlockEntity extends BlockEntity {
+    private static final java.util.Set<TvBlockEntity> INSTANCES = java.util.Collections.newSetFromMap(
+        new java.util.WeakHashMap<TvBlockEntity, Boolean>()
+    );
+
+    /** Immediately publish revoked approval to clients watching already-loaded TVs. */
+    public static void refreshMediaPolicy(Object server) {
+        synchronized (INSTANCES) {
+            for (TvBlockEntity tv : INSTANCES) {
+                if (tv.world instanceof net.minecraft.server.world.ServerWorld serverWorld
+                    && serverWorld.getServer() == server) tv.sync();
+            }
+        }
+    }
+
 	public static final int MAX_SAVED_VIDEOS = 128;
 	public static final int DEFAULT_VOLUME = 100;
 
@@ -32,6 +46,7 @@ public class TvBlockEntity extends BlockEntity {
 
 	public TvBlockEntity(BlockPos pos, BlockState state) {
 		super(ModBlockEntities.TV, pos, state);
+		synchronized (INSTANCES) { INSTANCES.add(this); }
 	}
 
 	public UUID getOwner() {

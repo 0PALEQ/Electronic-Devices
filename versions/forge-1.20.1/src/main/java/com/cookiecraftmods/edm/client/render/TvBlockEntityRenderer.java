@@ -55,12 +55,12 @@ public final class TvBlockEntityRenderer implements BlockEntityRenderer<TvBlockE
 			Matrix4f matrix = matrices.peek().getPositionMatrix();
 			Matrix3f normalMatrix = matrices.peek().getNormalMatrix();
 
-			RenderSystem.enableBlend();
+			// The display is an opaque surface; decoder alpha must not blend with the room.
+		RenderSystem.disableBlend();
 			RenderSystem.disableCull();
-			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
 			renderStateChanged = true;
-			RenderSystem.setShader(GameRenderer::getRenderTypeEntityTranslucentEmissiveProgram);
+			RenderSystem.setShader(GameRenderer::getRenderTypeEntitySolidProgram);
 			RenderSystem.setShaderTexture(0, texture);
 			Tessellator tessellator = Tessellator.getInstance();
 			BufferBuilder buffer = tessellator.getBuffer();

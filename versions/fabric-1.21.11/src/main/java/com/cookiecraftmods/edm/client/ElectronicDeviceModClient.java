@@ -16,7 +16,8 @@ public final class ElectronicDeviceModClient implements ClientModInitializer {
 
 		ClientPlayNetworking.registerGlobalReceiver(ModNetworking.OpenMediaScreenPayload.ID, (payload, context) ->
 			context.client().execute(() -> {
-				int page = context.client().currentScreen instanceof MediaScreen screen
+				if (payload.refreshOnly() && !(context.client().currentScreen instanceof MediaScreen current && current.isFor(payload.dimension(), payload.pos()))) return;
+			int page = context.client().currentScreen instanceof MediaScreen screen
 					&& screen.isFor(payload.dimension(), payload.pos())
 					? screen.getPage() : 0;
 				context.client().setScreen(new MediaScreen(

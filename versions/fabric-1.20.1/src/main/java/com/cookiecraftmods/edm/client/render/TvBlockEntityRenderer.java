@@ -47,14 +47,14 @@ public final class TvBlockEntityRenderer implements BlockEntityRenderer<TvBlockE
 		Matrix3f normalMatrix = matrices.peek().getNormalMatrix();
 		float[] previousShaderColor = RenderSystem.getShaderColor().clone();
 
-		RenderSystem.enableBlend();
+		// The display is an opaque surface; decoder alpha must not blend with the room.
+		RenderSystem.disableBlend();
 		RenderSystem.disableCull();
-		RenderSystem.defaultBlendFunc();
 		RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
-		// Use Minecraft's complete emissive-entity path rather than POSITION_TEXTURE.
+		// Use Minecraft's complete opaque-entity path rather than POSITION_TEXTURE.
 		// Shader packs replace vanilla programs and expect these color, overlay, light,
 		// and normal attributes; leaving them absent can make the sampled video yellow.
-		RenderSystem.setShader(GameRenderer::getRenderTypeEntityTranslucentEmissiveProgram);
+		RenderSystem.setShader(GameRenderer::getRenderTypeEntitySolidProgram);
 		RenderSystem.setShaderTexture(0, texture);
 		Tessellator tessellator = Tessellator.getInstance();
 		BufferBuilder buffer = tessellator.getBuffer();

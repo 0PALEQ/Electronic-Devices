@@ -1,5 +1,5 @@
 {
-  "parent": "electronic_device_mod:custom/tv_new_black_off",
+  "parent": "electronic_device_mod:custom/tv_new_black_video",
   "textures": {
     "all": "electronic_device_mod:block/tvon",
     "particle": "electronic_device_mod:block/screen_off",

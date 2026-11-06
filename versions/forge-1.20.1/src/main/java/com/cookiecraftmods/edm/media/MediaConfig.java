@@ -66,6 +66,10 @@ public final class MediaConfig {
 		remoteRange = Math.max(-1, remoteRange);
 	}
 
+	public void save() {
+		save(FMLPaths.CONFIGDIR.get().resolve(FILE_NAME));
+	}
+
 	private void save(Path path) {
 		try {
 			Files.createDirectories(path.getParent());

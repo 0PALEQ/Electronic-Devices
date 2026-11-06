@@ -132,3 +132,28 @@ Unknown hosts use `direct` unless added to `additionalAdultDomains`. Redirects
 and remote playlist contents are not inspected. Restrict `direct` as well if
 unknown hosts must not be available. Previous platform-specific settings migrate
 automatically to `adult_content`, preserving the more restrictive options.
+
+### Server link whitelist
+
+Set `mediaSources.linkWhitelistMode` to `true` in the server's
+`config/electronic_device_mod-media.json`, then restart the server. It defaults
+to `false`, preserving per-TV playlists. `mediaSources.approvedLinks` stores the
+shared list and can also be edited while the server is stopped.
+
+In whitelist mode every TV menu displays the same approved links (up to 128).
+Operators with level 2, or Fabric players granted
+`electronic_device_mod.media.admin`, can add and remove links through any TV's
+menu, regardless of ownership. Changes are saved to the server config and refresh
+open menus. Players select links directly from this pool; they cannot submit
+new links or change the pool, even if they own the TV.
+
+Approval matches the complete validated URL. It does not grant approval to
+other URLs on the same domain. Existing per-TV links outside the pool are
+blocked, including saved playback and remote controls. Removing approval blocks
+that URL on all TVs. Disabled source rules still apply; an admin-approved link
+can be selected by ordinary players even if its source has `requireAdmin` set.
+Approval covers the submitted URL, not redirects or changes to external content.
+
+Install the updated mod on both the server and clients. To run the standalone
+whitelist security regression checks, use `scripts/verify-whitelist.ps1` with
+`-JavaHome` pointing to a JDK 17 or newer.

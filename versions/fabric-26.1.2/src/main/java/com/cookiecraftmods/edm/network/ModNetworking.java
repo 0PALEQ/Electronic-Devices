@@ -33,6 +33,7 @@ public final class ModNetworking {
 
 	private static final long MENU_SESSION_LIFETIME_MS = 5L * 60L * 1000L;
 	private static final Map<UUID, MenuSession> MENU_SESSIONS = new ConcurrentHashMap<>();
+	private static final Map<UUID, List<String>> MENU_LINKS = new ConcurrentHashMap<>();
 
 	private ModNetworking() {
 	}
@@ -75,27 +76,41 @@ public final class ModNetworking {
 	private static void openMediaScreen(
 		ServerPlayer player, ServerLevel world, BlockPos pos, TvBlockEntity tv, boolean remote
 	) {
+		openMediaScreen(player, world, pos, tv, remote, false);
+	}
+
+	private static void openMediaScreen(
+		ServerPlayer player, ServerLevel world, BlockPos pos, TvBlockEntity tv, boolean remote, boolean refreshOnly
+	) {
 		MenuSession session = new MenuSession(
 			world.dimension(), pos.immutable(), ThreadLocalRandom.current().nextLong(), remote,
 			System.currentTimeMillis() + MENU_SESSION_LIFETIME_MS
 		);
 		MENU_SESSIONS.put(player.getUUID(), session);
-		sendMediaScreen(player, session, world, tv);
+		sendMediaScreen(player, session, world, tv, refreshOnly);
 	}
 
 	private static void sendMediaScreen(
-		ServerPlayer player, MenuSession session, ServerLevel world, TvBlockEntity tv
+		ServerPlayer player, MenuSession session, ServerLevel world, TvBlockEntity tv, boolean refreshOnly
 	) {
 		MediaConfig config = MediaConfig.get();
-		List<String> mediaUrls = tv.getMediaUrls();
+		List<String> mediaUrls = config.mediaSources.linkWhitelistMode
+			? List.copyOf(config.mediaSources.approvedLinks) : tv.getMediaUrls();
+		MENU_LINKS.put(player.getUUID(), List.copyOf(mediaUrls));
 		BlockState state = world.getBlockState(session.pos());
 		boolean powered = state.hasProperty(TvDevice.DISPLAY_STATE) && state.getValue(TvDevice.DISPLAY_STATE) == 1;
 
 		ServerPlayNetworking.send(player, new OpenMediaScreenPayload(
-			session.dimension().identifier(), session.pos(), session.token(), mediaUrls, tv.getSelectedMediaIndex(),
-			tv.getPlaybackPositionMs(), config.maxMediaUrlLength, config.maxSavedVideosPerTv, tv.getVolume(),
-			powered, canEdit(player, tv)
+			session.dimension().identifier(), session.pos(), session.token(), mediaUrls, (config.mediaSources.linkWhitelistMode ? mediaUrls.indexOf(tv.getMediaUrl()) : tv.getSelectedMediaIndex()),
+			tv.getPlaybackPositionMs(), config.maxMediaUrlLength, (config.mediaSources.linkWhitelistMode ? 128 : config.maxSavedVideosPerTv), tv.getVolume(),
+			powered, canEdit(player, tv), refreshOnly
 		));
+        if (config.mediaSources.linkWhitelistMode) {
+            sendActionResult(player, session.token(), true, canEdit(player, tv)
+                ? "Server whitelist: add or remove approved links for every TV."
+                : "Server whitelist: choose an approved link. Only administrators can edit this list.");
+        }
+
 	}
 
 	private static void addMediaUrl(ServerPlayer player, long token, String rawUrl) {
@@ -106,9 +121,28 @@ public final class ModNetworking {
 		}
 		TvBlockEntity tv = target.tv();
 		if (!canEdit(player, tv)) {
-			sendActionResult(player, token, false, "You do not own this TV.");
+			sendActionResult(player, token, false, "You do not have permission to edit this media list.");
 			return;
 		}
+		MediaConfig whitelistConfig = MediaConfig.get();
+        if (whitelistConfig.mediaSources.linkWhitelistMode) {
+            try {
+                String approved = MediaUrl.validate(rawUrl, whitelistConfig.maxMediaUrlLength);
+                // Validate source rules without temporarily changing the active policy.
+                var policy = whitelistConfig.mediaSources;
+                if (!policy.approvedLinks.contains(approved)) {
+                    if (policy.approvedLinks.size() >= 128) throw new IllegalArgumentException("The server's approved media list is full.");
+                    policy.approvedLinks.add(approved);
+                    try { MediaPermissions.checkSource(player, approved); }
+                    catch (IllegalArgumentException exception) { policy.approvedLinks.remove(approved); throw exception; }
+                    whitelistConfig.save();
+                }
+                refreshAndResult(player, target, "Link added to the server's approved media list.");
+            } catch (IllegalArgumentException exception) {
+                sendActionResult(player, token, false, exception.getMessage());
+            }
+            return;
+        }
 		if (!MediaPermissions.canAssignUrl(player)) {
 			sendActionResult(player, token, false, "You do not have permission to assign media.");
 			return;
@@ -154,6 +188,20 @@ public final class ModNetworking {
 			sendActionResult(player, token, false, "The TV menu expired or the target TV is unavailable.");
 			return;
 		}
+        if (MediaConfig.get().mediaSources.linkWhitelistMode) {
+            List<String> links = MENU_LINKS.getOrDefault(player.getUUID(), List.of());
+            if (index < 0 || index >= links.size()) {
+                sendActionResult(player, token, false, "That approved link no longer exists.");
+                return;
+            }
+            String url = links.get(index);
+            if (!checkSource(player, token, url)) return;
+            target.tv().clearMedia();
+            target.tv().addMediaUrl(url, player.getUUID());
+            TvDevice.setPowered(target.world(), target.pos(), target.world().getBlockState(target.pos()), true);
+            refreshAndResult(player, target, "Approved video selected.");
+            return;
+        }
 		if (index < 0 || index >= target.tv().getSavedVideoCount()) {
 			sendActionResult(player, token, false, "That saved video no longer exists.");
 			return;
@@ -175,9 +223,22 @@ public final class ModNetworking {
 		}
 		TvBlockEntity tv = target.tv();
 		if (!canEdit(player, tv)) {
-			sendActionResult(player, token, false, "You do not own this TV.");
+			sendActionResult(player, token, false, "You do not have permission to edit this media list.");
 			return;
 		}
+        if (MediaConfig.get().mediaSources.linkWhitelistMode) {
+            var config = MediaConfig.get();
+            List<String> shown = MENU_LINKS.getOrDefault(player.getUUID(), List.of());
+            if (index < 0 || index >= shown.size() || !config.mediaSources.approvedLinks.contains(shown.get(index))) {
+                sendActionResult(player, token, false, "That approved link no longer exists.");
+                return;
+            }
+            config.mediaSources.approvedLinks.remove(shown.get(index));
+            config.save();
+            TvBlockEntity.refreshMediaPolicy(player.level().getServer());
+            refreshAndResult(player, target, "Link removed from the server's approved media list.");
+            return;
+        }
 		if (index < 0 || index >= tv.getSavedVideoCount()) {
 			sendActionResult(player, token, false, "That saved video no longer exists.");
 			return;
@@ -226,6 +287,7 @@ public final class ModNetworking {
 		if (session == null || session.token() != token) return null;
 		if (session.expiresAtMs() < System.currentTimeMillis()) {
 			MENU_SESSIONS.remove(player.getUUID(), session);
+			MENU_LINKS.remove(player.getUUID());
 			return null;
 		}
 
@@ -263,12 +325,27 @@ public final class ModNetworking {
 	}
 
 	private static boolean canEdit(ServerPlayer player, TvBlockEntity tv) {
-		return tv.isOwner(player.getUUID()) || MediaPermissions.canManageOthers(player);
+		return MediaConfig.get().mediaSources.linkWhitelistMode ? MediaPermissions.canManageWhitelist(player)
+			: tv.isOwner(player.getUUID()) || MediaPermissions.canManageOthers(player);
 	}
 
 	private static void refreshAndResult(ServerPlayer player, MenuTarget target, String message) {
-		sendMediaScreen(player, target.session(), target.world(), target.tv());
-		sendActionResult(player, target.session().token(), true, message);
+        if (MediaConfig.get().mediaSources.linkWhitelistMode) {
+            MinecraftServer server = player.level().getServer();
+            if (server != null) for (ServerPlayer viewer : server.getPlayerList().getPlayers()) {
+                MenuSession session = MENU_SESSIONS.get(viewer.getUUID());
+                if (session == null) continue;
+                MenuTarget viewing = getMenuTarget(viewer, session.token());
+                if (viewing != null) {
+                    // New token rejects clicks sent from a list superseded by this update.
+                    openMediaScreen(viewer, viewing.world(), viewing.pos(), viewing.tv(), session.remote(), true);
+                }
+            }
+        } else {
+		sendMediaScreen(player, target.session(), target.world(), target.tv(), false);
+        }
+		MenuSession current = MENU_SESSIONS.get(player.getUUID());
+		sendActionResult(player, current == null ? target.session().token() : current.token(), true, message);
 	}
 
 	private static void sendActionResult(ServerPlayer player, long token, boolean success, String message) {
@@ -289,7 +366,7 @@ public final class ModNetworking {
 
 	public record OpenMediaScreenPayload(
 		Identifier dimension, BlockPos pos, long token, List<String> mediaUrls, int selectedMediaIndex,
-		long playbackPositionMs, int maxUrlLength, int maxSavedVideos, int volume, boolean powered, boolean canEdit
+		long playbackPositionMs, int maxUrlLength, int maxSavedVideos, int volume, boolean powered, boolean canEdit, boolean refreshOnly
 	) implements CustomPacketPayload {
 		public static final CustomPacketPayload.Type<OpenMediaScreenPayload> ID = new CustomPacketPayload.Type<>(id("open_media_screen"));
 		public static final StreamCodec<RegistryFriendlyByteBuf, OpenMediaScreenPayload> CODEC =
@@ -314,9 +391,10 @@ public final class ModNetworking {
 			int volume = buffer.readVarInt();
 			boolean powered = buffer.readBoolean();
 			boolean canEdit = buffer.readBoolean();
+			boolean refreshOnly = buffer.readBoolean();
 			return new OpenMediaScreenPayload(
 				dimension, pos, token, mediaUrls, selectedMediaIndex, playbackPositionMs,
-				maxUrlLength, maxSavedVideos, volume, powered, canEdit
+				maxUrlLength, maxSavedVideos, volume, powered, canEdit, refreshOnly
 			);
 		}
 
@@ -333,6 +411,7 @@ public final class ModNetworking {
 			buffer.writeVarInt(volume);
 			buffer.writeBoolean(powered);
 			buffer.writeBoolean(canEdit);
+			buffer.writeBoolean(refreshOnly);
 		}
 
 		@Override
